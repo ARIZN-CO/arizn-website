@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARIZN — AI Agents Working 24/7 For Your Local Business</title>
+    <meta name="description" content="Stop losing customers to missed calls, no-shows, and forgotten follow-ups. ARIZN installs AI agents that answer, book, and follow up 24/7 — for HVAC, dental, and auto repair businesses.">
+    <meta name="robots" content="index, follow, max-snippet:-1">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://arizn.co/">
+    <meta property="og:title" content="ARIZN — AI Agents Working 24/7 For Your Local Business">
+    <meta property="og:description" content="You don't learn anything. You don't do anything. We install AI that answers, books, and follows up 24/7. Built for local businesses.">
+    <meta property="og:url" content="https://arizn.co/">
+    <meta property="og:image" content="https://arizn.co/images/hero-branco.png">
+    <meta property="og:site_name" content="ARIZN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@arizn">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"ARIZN","description":"Business infrastructure for local businesses — AI agents, automation, websites, Google Business Profile, booking systems, and CRM.","url":"https://arizn.co","logo":"https://arizn.co/images/logo-arizn-preto-header.png","sameAs":["https://www.instagram.com/arizn"],"slogan":"The Future of Local Business"}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="theme-color" content="#1A56FF">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --color-bg: #F5F5F7;
+        --color-text: #1d1d1f;
+        --color-body: #6e6e73;
+        --color-accent: #1a56ff;
+        --color-accent-dark: #0d3acc;
+        --color-pill-bg: #f0f4ff;
+        --gradient-button-gray: linear-gradient(135deg, #5f6064 0%, #2f3034 42%, #111113 100%);
+        --gradient-button-gray-hover: linear-gradient(315deg, #5f6064 0%, #2f3034 42%, #111113 100%);
+        --container-max: 1920px;
+        --container-padding: 32px;
+        --font-head: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+        --font-main: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; background: var(--color-bg); color: var(--color-body); font-family: var(--font-main); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+      a { color: inherit; text-decoration: none; }
+      button { font: inherit; }
+      .container { width: 100%; max-width: var(--container-max); margin: 0 auto; padding: 0 var(--container-padding); }
+
+      /* ── Nav ── */
+      .site-nav { position: fixed; top: 0; left: 0; z-index: 100; width: 100%; background: rgba(245,245,247,0.86); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); }
+      .nav-inner { display: grid; min-height: 64px; align-items: center; grid-template-columns: 1fr auto 1fr; gap: 24px; }
+      .logo { display: inline-flex; align-items: center; justify-self: start; width: 160px; height: 38px; overflow: hidden; }
+      .logo img { width: 100%; height: 100%; object-fit: contain; object-position: left center; }
+      .nav-links { display: flex; align-items: center; justify-content: center; gap: 32px; color: var(--color-text); font-size: 14px; font-weight: 400; line-height: 1; }
+      .nav-links a { transition: color 0.15s ease; }
+      .nav-links a:hover { color: var(--color-accent); }
+      .nav-cta { justify-self: end; padding: 8px 20px; background: var(--gradient-button-gray); border-radius: 980px; color: #fff; font-size: 14px; font-weight: 500; line-height: 1; transition: background 0.2s ease; }
+      .nav-cta:hover { background: var(--gradient-button-gray-hover); }
+      .menu-toggle { display: none; width: 40px; height: 40px; align-items: center; justify-content: center; flex-direction: column; gap: 5px; justify-self: end; background: transparent; border: 0; cursor: pointer; }
+      .menu-toggle span, .menu-toggle::before, .menu-toggle::after { content: ""; width: 18px; height: 1.5px; background: var(--color-text); transition: opacity 0.15s ease, transform 0.15s ease; }
+      body.nav-open .menu-toggle span { opacity: 0; }
+      body.nav-open .menu-toggle::before { transform: translateY(6.5px) rotate(45deg); }
+      body.nav-open .menu-toggle::after { transform: translateY(-6.5px) rotate(-45deg); }
+
+      /* ── Hero ── */
+      #hero { position: relative; overflow: hidden; min-height: 100vh; padding: 120px 0 80px; background: #F5F5F7; }
+      #hero::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(to right, rgba(245,245,247,0.92) 0%, rgba(245,245,247,0.12) 16%, transparent 32%); pointer-events: none; }
+      #hero::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(to bottom, #F5F5F7 0%, transparent 10%), linear-gradient(to top, #F5F5F7 0%, transparent 12%), linear-gradient(to left, #F5F5F7 0%, transparent 10%); pointer-events: none; }
+      .hero-grid { position: relative; z-index: 2; display: grid; min-height: calc(100vh - 200px); align-items: center; grid-template-columns: 1fr; gap: 0; }
+      .hero-content { display: grid; justify-items: start; align-content: center; max-width: 640px; }
+      .hero-badge { display: inline-flex; align-items: center; gap: 8px; width: fit-content; margin: 0 0 24px; padding: 7px 14px; background: #111113; border-radius: 100px; color: #fff; font-size: 12px; font-weight: 600; letter-spacing: 0.02em; line-height: 1; }
+      .hero-badge-dot { width: 8px; height: 8px; background: #32d74b; border-radius: 50%; box-shadow: 0 0 0 rgba(50,215,75,0.48); animation: badgePulse 1.8s ease-in-out infinite; }
+      @keyframes badgePulse { 0% { box-shadow: 0 0 0 0 rgba(50,215,75,0.48); } 70% { box-shadow: 0 0 0 8px rgba(50,215,75,0); } 100% { box-shadow: 0 0 0 0 rgba(50,215,75,0); } }
+      .hero-title { margin: 0; color: var(--color-text); font-family: var(--font-main); font-size: 64px; font-weight: 900; letter-spacing: -0.04em; line-height: 1.02; }
+      .hero-subtitle { margin: 4px 0 0; color: var(--color-text); font-family: var(--font-main); font-size: 42px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.12; }
+      .hero-copy { max-width: 480px; margin: 24px 0 0; color: var(--color-body); font-size: 19px; font-weight: 400; line-height: 1.6; }
+      .hero-slogan { max-width: 480px; margin: 12px 0 0; color: var(--color-accent); font-size: 17px; font-style: italic; font-weight: 300; line-height: 1.5; }
+      .hero-action { display: grid; justify-items: center; margin: 32px 0 0; }
+      .hero-button { display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 16px 36px; background: var(--gradient-button-gray); border: 0; border-radius: 980px; color: #fff; font-size: 17px; font-weight: 500; line-height: 1; transition: background 0.2s ease; }
+      .hero-button:hover { background: var(--gradient-button-gray-hover); }
+      .hero-subtext { margin: 12px 0 0; color: var(--color-body); font-size: 13px; font-weight: 400; line-height: 1.5; text-align: center; }
+      .hero-bg-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: right center; z-index: 0; filter: saturate(0.96) contrast(0.98); -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%), linear-gradient(to bottom, transparent 0%, #000 10%, #000 90%, transparent 100%); -webkit-mask-composite: source-in; mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%), linear-gradient(to bottom, transparent 0%, #000 10%, #000 90%, transparent 100%); mask-composite: intersect; }
+      .hero-mobile-wrap { display: none; }
+
+      /* ── Stats Bar ── */
+      #stats-bar { background: #fff; border-top: 1px solid #E8E8E8; border-bottom: 1px solid #E8E8E8; padding: 40px 0; }
+      .stats-bar-inner { max-width: 1140px; margin: 0 auto; padding: 0 48px; display: flex; align-items: stretch; }
+      .stat-bar-item { flex: 1; padding: 0 40px; }
+      .stat-bar-item + .stat-bar-item { border-left: 1px solid #E8E8E8; }
+      .stat-bar-value { font-family: var(--font-head); font-size: 42px; font-weight: 800; color: var(--color-text); letter-spacing: -0.03em; line-height: 1; margin-bottom: 8px; }
+      .stat-bar-value.accent { color: var(--color-accent); }
+      .stat-bar-desc { font-size: 14px; color: var(--color-body); line-height: 1.5; max-width: 200px; }
+
+      /* ── Shared section styles ── */
+      .section-inner { width: 100%; max-width: 1140px; margin: 0 auto; padding: 0 48px; }
+      .section-label { margin: 0 0 10px; color: #1A56FF; font-size: 12px; font-weight: 600; line-height: 1.2; letter-spacing: 0.08em; text-transform: uppercase; }
+      .section-title { margin: 0; font-family: var(--font-head); font-size: 48px; font-weight: 900; line-height: 1.08; letter-spacing: -0.03em; }
+      .section-sub { margin: 12px 0 0; font-size: 18px; font-weight: 400; line-height: 1.55; color: var(--color-body); }
+      .fade-in { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
+      .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+      /* ── Results ── */
+      #results { background: #FFFFFF; padding: 96px 0; }
+      .results-header { margin-bottom: 48px; }
+      .results-title { color: #1D1D1F; }
+      .results-subtitle { max-width: 640px; color: #6E6E73; }
+      .case-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 48px; }
+      .case-card { width: 100%; overflow: hidden; background: #FFFFFF; border: 1px solid #E8E8E8; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+      .case-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.10); }
+      .case-image { position: relative; display: flex; width: 100%; height: 240px; align-items: flex-end; overflow: hidden; padding: 16px; background-position: center; background-repeat: no-repeat; background-size: contain; }
+      .case-image::before { position: absolute; inset: 0; z-index: 1; background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%); content: ""; }
+      .case-img-neo { background-image: url("images/neopeptide.png"); background-color: #F5F5F7; }
+      .case-img-prime { background-image: url("images/prime-flavor.png"); background-color: #111113; background-size: cover; }
+      .case-img-ricardo { background-image: url("images/ricardo-augusto.png"); background-color: #F5F5F7; }
+      .case-img-riocali { background: linear-gradient(135deg, #e8d5c4 0%, #b8896a 100%); }
+      .solution-tag { position: relative; z-index: 2; padding: 4px 10px; background: rgba(26,86,255,0.9); border-radius: 100px; color: #FFF; font-size: 11px; font-weight: 600; line-height: 1.4; letter-spacing: 0.06em; text-transform: uppercase; }
+      .case-body { padding: 24px; }
+      .case-name { margin: 0 0 4px; color: #1D1D1F; font-size: 18px; font-weight: 700; line-height: 1.25; }
+      .case-meta { margin: 0; color: #6E6E73; font-size: 14px; font-weight: 400; line-height: 1.5; }
+      .case-divider { margin: 16px 0; border: 0; border-top: 1px solid #F0F0EE; }
+      .built-label { margin: 0; color: #6E6E73; font-size: 11px; font-weight: 600; line-height: 1.4; letter-spacing: 0.06em; text-transform: uppercase; }
+      .services-list { display: grid; gap: 6px; margin: 6px 0 0; padding: 0; color: #1D1D1F; font-size: 14px; font-weight: 500; line-height: 1.45; list-style: none; }
+      .services-list li::before { margin-right: 8px; color: #1A56FF; content: "✓"; }
+      .results-cta { margin-top: 48px; text-align: center; }
+      .results-cta-text { margin: 0; color: #6E6E73; font-size: 16px; font-weight: 400; line-height: 1.5; }
+      .results-button { display: inline-flex; align-items: center; justify-content: center; margin-top: 16px; padding: 14px 32px; background: var(--gradient-button-gray); border-radius: 999px; color: #FFF; font-size: 15px; font-weight: 600; line-height: 1; transition: background 0.2s ease, transform 0.2s ease; }
+      .results-button:hover { background: var(--gradient-button-gray-hover); transform: translateY(-1px); }
+
+      /* ── Problem ── */
+      #problem { overflow: hidden; background: #0C0C0C; padding: 96px 0; color: #FFF; }
+      .problem-header { text-align: center; }
+      .problem-label { margin: 0 0 10px; color: #1A56FF; font-size: 12px; font-weight: 600; line-height: 1.2; letter-spacing: 0.08em; text-transform: uppercase; }
+      .problem-title { margin: 0; color: #FFF; font-family: var(--font-head); font-size: 48px; font-weight: 800; line-height: 1.08; letter-spacing: -0.03em; text-align: center; }
+      .problem-subtitle { margin: 12px auto 0; color: rgba(255,255,255,0.5); font-size: 18px; font-weight: 400; line-height: 1.55; text-align: center; }
+      .problem-split { display: grid; grid-template-columns: 1fr 1px 1fr; gap: 2px; margin-top: 72px; }
+      .problem-divider { width: 1px; height: 100%; background: rgba(255,255,255,0.1); }
+      .problem-side { padding: 48px; }
+      .problem-side.wrong { background: rgba(239,68,68,0.04); border-radius: 16px 0 0 16px; }
+      .problem-side.right { background: rgba(26,86,255,0.06); border-radius: 0 16px 16px 0; }
+      .side-label { margin: 0; font-size: 11px; font-weight: 600; line-height: 1.4; letter-spacing: 0.08em; text-transform: uppercase; }
+      .problem-side.wrong .side-label { color: rgba(255,255,255,0.3); }
+      .problem-side.right .side-label { color: #1A56FF; }
+      .side-title { margin: 8px 0 0; color: #FFF; font-size: 28px; font-weight: 700; line-height: 1.2; }
+      .split-image { width: 100%; height: 560px; margin: 24px 0; border-radius: 12px; background-position: center; background-repeat: no-repeat; background-size: contain; }
+      #wrong-way-image { background-color: rgba(255,255,255,0.05); background-image: url("images/sem-agente.png"); border: 1px solid rgba(255,255,255,0.08); }
+      #arizn-way-image { background-color: rgba(26,86,255,0.08); background-image: url("images/agente-24hrs.png"); border: 1px solid rgba(26,86,255,0.18); }
+      .point-list { display: grid; gap: 16px; margin: 0; padding: 0; list-style: none; }
+      .point-list li { display: flex; align-items: flex-start; gap: 12px; color: rgba(255,255,255,0.7); font-size: 16px; font-weight: 400; line-height: 1.6; }
+      .point-icon { flex-shrink: 0; margin-top: 2px; font-size: 16px; line-height: 1.6; }
+      .wrong .point-icon { color: #EF4444; }
+      .right .point-icon { color: #1A56FF; }
+      .problem-stats { display: grid; grid-template-columns: repeat(3,1fr); margin-top: 48px; padding: 40px 48px; background: rgba(255,255,255,0.04); border-top: 1px solid rgba(255,255,255,0.08); border-radius: 0 0 16px 16px; text-align: center; }
+      .problem-stat { padding: 0 28px; }
+      .problem-stat:not(:last-child) { border-right: 1px solid rgba(255,255,255,0.08); }
+      .stat-number { margin: 0; color: #FFF; font-family: var(--font-head); font-size: 42px; font-weight: 800; line-height: 1; }
+      .stat-number.accent { color: #1A56FF; }
+      .stat-label { margin: 10px 0 0; color: rgba(255,255,255,0.5); font-size: 14px; font-weight: 400; line-height: 1.5; }
+      .problem-animate { opacity: 0; transition: opacity 0.7s ease, transform 0.7s ease; }
+      .problem-side.wrong.problem-animate { transform: translateX(-30px); }
+      .problem-side.right.problem-animate { transform: translateX(30px); }
+      .problem-stats.problem-animate { transform: translateY(24px); transition-delay: 0.3s; }
+      #problem.visible .problem-animate { opacity: 1; transform: translate(0,0); }
+
+      /* ── Solution ── */
+      #solution { background: #F5F5F7; padding: 96px 0; }
+      .solution-header { margin-bottom: 56px; }
+      .solution-title { color: #1D1D1F; }
+      .solution-subtitle { max-width: 560px; }
+      .agent-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; margin-top: 0; }
+      .agent-card { position: relative; overflow: hidden; padding: 40px; background: #0C0C0C; border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.15); display: block; color: inherit; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+      .agent-card:hover { transform: translateY(-4px); box-shadow: 0 28px 72px rgba(0,0,0,0.22); }
+      .agent-card::before { position: absolute; inset: 0; z-index: 0; background: radial-gradient(ellipse at top, rgba(26,86,255,0.15) 0%, transparent 70%); content: ""; }
+      .agent-content { position: relative; z-index: 1; }
+      .agent-badge { display: inline-flex; align-items: center; padding: 4px 12px; background: rgba(0,200,81,0.15); border: 1px solid rgba(0,200,81,0.3); border-radius: 100px; color: #00C851; font-size: 11px; font-weight: 600; line-height: 1.4; letter-spacing: 0.04em; }
+      .agent-icon { display: block; width: 72px; height: 72px; margin-top: 24px; overflow: visible; }
+      .agent-icon .pulse-ring { transform-origin: center; animation: agentPulse 2s ease-in-out infinite; }
+      @keyframes agentPulse { 0%,100% { opacity: 0.3; transform: scale(1); } 50% { opacity: 0.6; transform: scale(1.05); } }
+      .agent-title { margin: 16px 0 0; color: #FFF; font-size: 26px; font-weight: 700; line-height: 1.2; }
+      .agent-description { margin: 12px 0 0; color: rgba(255,255,255,0.6); font-size: 15px; font-weight: 400; line-height: 1.7; }
+      .agent-features { display: grid; gap: 12px; margin: 24px 0 0; padding: 0; list-style: none; }
+      .agent-features li { display: flex; gap: 10px; color: rgba(255,255,255,0.7); font-size: 14px; font-weight: 400; line-height: 1.5; }
+      .agent-features li::before { width: 6px; height: 6px; flex-shrink: 0; margin-top: 7px; background: var(--gradient-button-gray); border-radius: 50%; content: ""; }
+      .agent-image { display: flex; width: 100%; height: 480px; align-items: center; justify-content: center; margin-top: 24px; background-position: center; background-repeat: no-repeat; background-size: contain; border-radius: 12px; }
+      #booking-agent-image { background-color: rgba(26,86,255,0.08); background-image: url("images/24h-booking-agent.png"); border: 1px solid rgba(26,86,255,0.18); }
+      #support-agent-image { background-color: rgba(26,86,255,0.08); background-image: url("images/24h-support-agent.png"); border: 1px solid rgba(26,86,255,0.18); }
+      .automation-header { margin-top: 72px; }
+      .automation-title { margin: 0; color: #1D1D1F; font-size: 28px; font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; }
+      .automation-subtitle { margin: 10px 0 0; color: #6E6E73; font-size: 16px; font-weight: 400; line-height: 1.6; }
+      .automation-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; margin-top: 32px; }
+      .automation-card { padding: 24px; background: #FFF; border: 1px solid #E8E8E8; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); transition: transform 0.2s ease, box-shadow 0.2s ease; display: block; color: inherit; }
+      .automation-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+      .automation-icon { display: inline-flex; align-items: center; justify-content: center; min-width: 32px; height: 32px; font-size: 28px; line-height: 1; }
+      .automation-name { margin: 12px 0 0; color: #1D1D1F; font-size: 16px; font-weight: 600; line-height: 1.3; }
+      .automation-description { margin: 6px 0 0; color: #6E6E73; font-size: 14px; font-weight: 400; line-height: 1.6; }
+      .solution-cta { margin-top: 64px; text-align: center; }
+      .solution-cta-text { margin: 0; color: #6E6E73; font-size: 16px; }
+      .solution-button { display: inline-flex; align-items: center; justify-content: center; margin-top: 16px; padding: 16px 36px; background: var(--gradient-button-gray); border-radius: 999px; color: #FFF; font-size: 15px; font-weight: 600; line-height: 1; transition: background 0.2s ease, transform 0.2s ease; }
+      .solution-button:hover { background: var(--gradient-button-gray-hover); transform: translateY(-1px); }
+      .solution-cta-subtext { margin: 10px 0 0; color: #6E6E73; font-size: 13px; }
+      .solution-animate { opacity: 0; transform: translateY(24px); transition: opacity 0.65s ease, transform 0.65s ease; }
+      .agent-card.solution-animate { transform: scale(0.97); }
+      .agent-card.solution-animate:nth-child(2) { transition-delay: 0.15s; }
+      .automation-card.solution-animate:nth-child(1) { transition-delay: 0s; }
+      .automation-card.solution-animate:nth-child(2) { transition-delay: 0.08s; }
+      .automation-card.solution-animate:nth-child(3) { transition-delay: 0.16s; }
+      .automation-card.solution-animate:nth-child(4) { transition-delay: 0.24s; }
+      .automation-card.solution-animate:nth-child(5) { transition-delay: 0.32s; }
+      .automation-card.solution-animate:nth-child(6) { transition-delay: 0.4s; }
+      .solution-animate.visible { opacity: 1; transform: translateY(0) scale(1); }
+
+      /* ── Process ── */
+      #process { background: #F5F5F7; padding: 96px 0; }
+      .process-header { text-align: center; }
+      .process-title { color: #1D1D1F; }
+      .process-subtitle { margin: 12px 0 0; color: #6E6E73; text-align: center; font-size: 18px; }
+      .process-steps { position: relative; display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 24px; margin-top: 80px; }
+      .step-card { position: relative; z-index: 1; overflow: hidden; padding: 36px 28px; background: linear-gradient(135deg, #080B16 0%, #0D1428 52%, #101B38 100%); border: 1px solid rgba(26,86,255,0.15); border-radius: 20px; transition: transform 0.2s ease, border-color 0.2s ease; }
+      .step-card:hover { transform: translateY(-4px); border-color: rgba(26,86,255,0.4); }
+      .step-card::before { position: absolute; top: 0; left: 28px; width: 40px; height: 2px; background: #1A56FF; border-radius: 100px; content: ""; }
+      .step-card:not(:last-child)::after { position: absolute; top: 50%; right: 8px; z-index: 2; transform: translateY(-50%); color: rgba(26,86,255,0.4); font-size: 20px; line-height: 1; content: "→"; }
+      .step-ghost { position: absolute; right: -10px; bottom: -20px; z-index: 0; color: rgba(255,255,255,0.12); font-family: var(--font-head); font-size: 120px; font-weight: 800; line-height: 1; letter-spacing: -0.04em; user-select: none; opacity: 0; transition: opacity 0.5s ease 0.3s; }
+      .step-card.visible .step-ghost { opacity: 1; }
+      .step-badge { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; background: rgba(26,86,255,0.15); border: 1px solid rgba(26,86,255,0.3); border-radius: 100px; color: #1A56FF; font-size: 12px; font-weight: 600; line-height: 1.2; letter-spacing: 0.06em; text-transform: uppercase; }
+      .step-badge::before { width: 6px; height: 6px; flex-shrink: 0; background: #1A56FF; border-radius: 50%; content: ""; }
+      .step-content { position: relative; z-index: 1; }
+      .step-title { margin: 20px 0 0; color: #FFF; font-size: 24px; font-weight: 700; line-height: 1.25; letter-spacing: -0.01em; }
+      .step-description { margin: 12px 0 0; color: rgba(255,255,255,0.6); font-size: 15px; font-weight: 400; line-height: 1.75; }
+      .step-tag { display: inline-block; margin-top: 24px; padding: 6px 14px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; color: rgba(255,255,255,0.5); font-size: 11px; font-weight: 600; line-height: 1.4; letter-spacing: 0.06em; text-transform: uppercase; }
+      .process-cta { margin-top: 72px; padding: 48px; background: linear-gradient(135deg, #080B16 0%, #0D1428 52%, #101B38 100%); border: 1px solid rgba(26,86,255,0.22); border-radius: 20px; text-align: center; }
+      .process-cta-title { margin: 0; color: #FFF; font-size: 32px; font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; }
+      .process-cta-subtitle { margin: 8px 0 0; color: rgba(255,255,255,0.5); font-size: 16px; }
+      .process-button { display: inline-flex; align-items: center; justify-content: center; margin-top: 32px; padding: 16px 40px; background: var(--gradient-button-gray); border: 0; border-radius: 980px; color: #FFF; font-size: 17px; font-weight: 600; line-height: 1; transition: background 0.2s ease, transform 0.2s ease; }
+      .process-button:hover { background: var(--gradient-button-gray-hover); transform: scale(1.02); }
+      .process-cta-note { margin: 12px 0 0; color: rgba(255,255,255,0.4); font-size: 13px; }
+      .process-animate { opacity: 0; transform: translateY(24px); transition: opacity 0.65s ease, transform 0.65s ease; }
+      .step-card.process-animate:nth-child(1) { transition-delay: 0s; }
+      .step-card.process-animate:nth-child(2) { transition-delay: 0.1s; }
+      .step-card.process-animate:nth-child(3) { transition-delay: 0.2s; }
+      .step-card.process-animate:nth-child(4) { transition-delay: 0.3s; }
+      .process-cta.process-animate { transition-delay: 0.4s; }
+      .process-animate.visible { opacity: 1; transform: translateY(0); }
+
+      /* ── Products ── */
+      #products { background: #0C0C0C; padding: 96px 0; }
+      .products-title { color: #FFF; }
+      .products-subtitle { color: rgba(255,255,255,0.5); }
+      .products-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 16px; margin-top: 56px; }
+      .product-card { position: relative; overflow: hidden; padding: 28px 24px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease; display: block; color: inherit; cursor: pointer; }
+      .product-card:hover { transform: translateY(-3px); background: rgba(255,255,255,0.06); border-color: rgba(26,86,255,0.3); }
+      .product-card.featured { background: rgba(26,86,255,0.08); border-color: rgba(26,86,255,0.2); }
+      .requested-badge { position: absolute; top: 16px; right: 16px; padding: 3px 10px; background: rgba(26,86,255,0.15); border: 1px solid rgba(26,86,255,0.3); border-radius: 100px; color: #1A56FF; font-size: 10px; font-weight: 600; line-height: 1.3; letter-spacing: 0.04em; text-transform: uppercase; }
+      .product-icon { display: flex; width: 44px; height: 44px; align-items: center; justify-content: center; margin-bottom: 16px; border-radius: 12px; font-size: 22px; line-height: 1; }
+      .icon-ai,.icon-web,.icon-booking { background: rgba(26,86,255,0.15); color: #1A56FF; }
+      .icon-phone { background: rgba(239,68,68,0.15); color: #EF4444; }
+      .icon-social { background: rgba(131,58,180,0.15); color: #833AB4; }
+      .icon-email,.icon-revenue { background: rgba(124,58,237,0.15); color: #7C3AED; }
+      .icon-sms,.icon-crm { background: rgba(13,158,117,0.15); color: #0D9E75; }
+      .icon-google,.icon-review { background: rgba(245,166,35,0.15); color: #F5A623; }
+      .ai-icon { width: 28px; height: 28px; }
+      .product-pain { margin: 0 0 10px; color: rgba(255,255,255,0.92); font-size: 15px; font-weight: 600; line-height: 1.45; }
+      .product-copy { margin: 0 0 12px; color: rgba(255,255,255,0.5); font-size: 14px; font-weight: 400; line-height: 1.6; }
+      .product-result { display: flex; align-items: center; gap: 6px; margin: 0 0 16px; color: #1A56FF; font-size: 13px; font-weight: 500; line-height: 1.4; }
+      .product-result::before { content: "→"; }
+      .product-name { display: block; margin: 0; color: rgba(255,255,255,0.25); font-size: 11px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; }
+      .products-cta { margin-top: 64px; text-align: center; }
+      .products-cta-title { margin: 0; color: #FFF; font-size: 20px; font-weight: 600; }
+      .products-cta-copy { margin: 8px auto 0; color: rgba(255,255,255,0.5); font-size: 16px; }
+      .products-button { display: inline-flex; align-items: center; justify-content: center; margin-top: 28px; padding: 16px 40px; background: var(--gradient-button-gray); border-radius: 980px; color: #FFF; font-size: 17px; font-weight: 600; line-height: 1; transition: background 0.2s ease, transform 0.2s ease; }
+      .products-button:hover { transform: scale(1.02); background: var(--gradient-button-gray-hover); }
+      .products-animate { opacity: 0; transform: translateY(20px); transition: opacity 0.65s ease, transform 0.65s ease; }
+      .product-card.products-animate { transition-delay: calc(var(--card-index, 0) * 0.06s); }
+      .products-animate.visible { opacity: 1; transform: translateY(0) scale(1); }
+
+      /* ── Verticals ── */
+      #verticals { background: #F5F5F7; padding: 96px 0; }
+      .verticals-title { color: #1D1D1F; }
+      .verticals-subtitle { max-width: 600px; }
+      .verticals-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; margin-top: 64px; }
+      .vertical-card { position: relative; overflow: hidden; padding: 40px 36px; background: #FFF; border: 1px solid #E8E8E8; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); transition: transform 0.2s ease, box-shadow 0.2s ease; display: block; color: inherit; }
+      .vertical-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.10); }
+      .vertical-card::before { position: absolute; top: 0; left: 0; width: 100%; height: 3px; content: ""; }
+      .vertical-card.home::before { background: #1A56FF; }
+      .vertical-card.dental::before { background: #0D9E75; }
+      .vertical-card.auto::before { background: #F5A623; }
+      .vertical-icon { font-size: 48px; line-height: 1; }
+      .vertical-name { margin: 20px 0 0; color: #1D1D1F; font-size: 24px; font-weight: 700; line-height: 1.25; }
+      .vertical-industries { margin: 8px 0 0; color: #6E6E73; font-size: 13px; font-weight: 500; line-height: 1.5; }
+      .vertical-copy { margin: 16px 0 0; color: #6E6E73; font-size: 15px; font-weight: 400; line-height: 1.7; }
+      .vertical-stat { margin-top: 24px; padding: 16px 20px; background: #F5F8FF; border-radius: 10px; }
+      .vstat-value { margin: 0; color: #1A56FF; font-family: var(--font-head); font-size: 32px; font-weight: 800; line-height: 1; }
+      .vstat-label { margin: 4px 0 0; color: #6E6E73; font-size: 13px; font-weight: 400; line-height: 1.45; }
+      .verticals-note { margin: 48px 0 0; color: #6E6E73; font-size: 15px; text-align: center; }
+      .verticals-animate { opacity: 0; transform: translateY(24px); transition: opacity 0.65s ease, transform 0.65s ease; }
+      .vertical-card.verticals-animate:nth-child(2) { transition-delay: 0.1s; }
+      .vertical-card.verticals-animate:nth-child(3) { transition-delay: 0.2s; }
+      .verticals-animate.visible { opacity: 1; transform: translateY(0); }
+
+      /* ── Contact ── */
+      #contact { background: #0C0C0C; padding: 120px 0; text-align: center; }
+      .contact-inner { max-width: 800px; margin: 0 auto; padding: 0 48px; }
+      .contact-label { margin: 0; color: #1A56FF; font-size: 12px; font-weight: 600; line-height: 1.2; letter-spacing: 0.08em; text-transform: uppercase; }
+      .contact-title { margin: 12px 0 0; color: #FFF; font-family: var(--font-head); font-size: 52px; font-weight: 800; line-height: 1.08; letter-spacing: -0.03em; }
+      .contact-subtitle { margin: 20px 0 0; color: rgba(255,255,255,0.55); font-size: 20px; font-weight: 400; line-height: 1.65; }
+      .contact-slogan { margin: 16px 0 0; color: #1A56FF; font-size: 18px; font-style: italic; font-weight: 300; line-height: 1.4; }
+      .contact-button { display: inline-flex; align-items: center; justify-content: center; margin-top: 48px; padding: 18px 48px; background: var(--gradient-button-gray); border: 0; border-radius: 980px; color: #FFF; font-size: 18px; font-weight: 600; line-height: 1; transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease; }
+      .contact-button:hover { transform: scale(1.02); background: var(--gradient-button-gray-hover); box-shadow: 0 0 36px rgba(26,86,255,0.24); }
+      .contact-note { margin: 16px 0 0; color: rgba(255,255,255,0.35); font-size: 14px; }
+      .contact-stats { display: grid; grid-template-columns: repeat(3,1fr); margin-top: 72px; padding: 32px 0; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; }
+      .contact-stat { padding: 0 24px; }
+      .contact-stat:not(:last-child) { border-right: 1px solid rgba(255,255,255,0.08); }
+      .contact-stat-number { margin: 0; color: #FFF; font-family: var(--font-head); font-size: 36px; font-weight: 800; line-height: 1; }
+      .contact-stat-number.accent { color: #1A56FF; }
+      .contact-stat-label { margin: 8px 0 0; color: rgba(255,255,255,0.4); font-size: 13px; }
+      .contact-animate { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+      .contact-animate.visible { opacity: 1; transform: translateY(0); }
+
+      /* ── Footer ── */
+      .site-footer { background: #0A0A0A; padding: 64px 0 40px; border-top: 1px solid rgba(255,255,255,0.06); }
+      .footer-inner { max-width: 1140px; margin: 0 auto; padding: 0 48px; display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 64px; margin-bottom: 48px; }
+      .footer-logo { color: #FFF; font-size: 22px; font-weight: 800; line-height: 1; letter-spacing: -0.5px; }
+      .footer-logo span { color: #1A56FF; }
+      .footer-tagline { margin: 8px 0 0; color: rgba(255,255,255,0.4); font-size: 14px; font-style: italic; font-weight: 300; }
+      .footer-description { max-width: 260px; margin: 16px 0 0; color: rgba(255,255,255,0.35); font-size: 13px; line-height: 1.7; }
+      .footer-col-title { margin: 0 0 20px; color: rgba(255,255,255,0.3); font-size: 11px; font-weight: 600; line-height: 1.3; letter-spacing: 0.1em; text-transform: uppercase; }
+      .footer-link { display: block; margin-bottom: 10px; color: rgba(255,255,255,0.5); font-size: 14px; transition: color 0.15s; }
+      .footer-link:hover { color: rgba(255,255,255,0.9); }
+      .footer-divider { max-width: 1140px; margin: 0 auto 32px; padding: 0 48px; border: 0; border-top: 1px solid rgba(255,255,255,0.06); }
+      .footer-bottom { max-width: 1140px; margin: 0 auto; padding: 0 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+      .footer-bottom p { margin: 0; color: rgba(255,255,255,0.25); font-size: 13px; }
+      .footer-bottom p:last-child { text-align: right; }
+      .site-footer.footer-animate { opacity: 0; transition: opacity 0.7s ease; }
+      .site-footer.footer-animate.visible { opacity: 1; }
+
+      /* ── Responsive ── */
+      @media (max-width: 1700px) and (min-width: 769px) { #hero::before { background: linear-gradient(to right, #F5F5F7 0%, #F5F5F7 30%, rgba(245,245,247,0.55) 52%, transparent 70%); } }
+      @media (max-width: 1100px) and (min-width: 769px) { .hero-title { font-size: 52px; } #hero::before { background: linear-gradient(to right, #F5F5F7 0%, #F5F5F7 38%, rgba(245,245,247,0.6) 58%, transparent 76%); } }
+      @media (max-width: 900px) {
+        body { overflow-x: hidden; }
+        .section-inner, .stats-bar-inner, .contact-inner { padding-left: 24px; padding-right: 24px; }
+        .footer-inner, .footer-divider, .footer-bottom { padding-left: 24px; padding-right: 24px; }
+        .hero-title, .problem-title, .solution-title, .process-title, .products-title, .verticals-title, .contact-title { overflow-wrap: anywhere; }
+      }
+      @media (max-width: 768px) {
+        #hero, #results, #problem, #solution, #process, #products, #verticals { padding-top: 72px; padding-bottom: 72px; }
+        #hero { min-height: auto; padding-top: 96px; padding-bottom: 24px; display: flex; flex-direction: column; align-items: stretch; overflow: visible; gap: 24px; background: linear-gradient(to bottom, #F5F5F7 0%, #F5F5F7 85%, #FFF 100%); }
+        #hero::before, #hero::after { display: none; }
+        .hero-bg-img { display: none !important; }
+        .hero-mobile-wrap { display: block; overflow: hidden; position: relative; width: 100%; height: clamp(460px, 120vw, 640px); }
+        .hero-mobile-wrap::after { content: ""; position: absolute; right: 0; bottom: 0; left: 0; height: 10%; background: linear-gradient(to bottom, rgba(245,245,247,0) 0%, #F5F5F7 55%, #FFF 100%); pointer-events: none; z-index: 2; }
+        .hero-mobile-img { display: block; width: 100%; height: auto; margin-top: -0.5in; }
+        .hero-grid { display: block; min-height: auto; }
+        .hero-content { justify-items: center; width: 100%; max-width: 100%; text-align: center; }
+        .hero-copy, .hero-subtitle, .hero-slogan, .hero-subtext { text-align: center; }
+        .hero-badge { max-width: 100%; flex-wrap: wrap; justify-content: center; white-space: normal; }
+        .hero-title { font-size: 42px; letter-spacing: -0.03em; }
+        .hero-subtitle { font-size: 28px; }
+        .hero-button, .results-button, .solution-button, .process-button, .products-button, .contact-button { width: 100%; max-width: min(420px, 100%); }
+        .nav-inner { display: flex; min-height: 60px; justify-content: space-between; }
+        .nav-links { position: fixed; top: 60px; right: 0; left: 0; display: grid; gap: 0; padding: 12px 24px 18px; background: rgba(251,251,253,0.96); border-bottom: 1px solid rgba(0,0,0,0.08); box-shadow: 0 16px 40px rgba(0,0,0,0.08); opacity: 0; pointer-events: none; transform: translateY(-10px); transition: opacity 0.15s ease, transform 0.15s ease; backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); }
+        .nav-links a { padding: 12px 0; }
+        body.nav-open .nav-links { opacity: 1; pointer-events: auto; transform: translateY(0); }
+        .nav-cta { display: none; }
+        .menu-toggle { display: flex; }
+        .stats-bar-inner { flex-direction: column; gap: 24px; }
+        .stat-bar-item { padding: 0; }
+        .stat-bar-item + .stat-bar-item { border-left: none; border-top: 1px solid #E8E8E8; padding-top: 24px; }
+        .case-grid { grid-template-columns: 1fr; }
+        .problem-split { grid-template-columns: 1fr; gap: 24px; }
+        .problem-divider { display: none; }
+        .problem-side, .problem-side.wrong, .problem-side.right { border-radius: 16px; padding: 32px 24px; }
+        .problem-stats { grid-template-columns: 1fr; gap: 32px; }
+        .problem-stat { padding: 0; }
+        .problem-stat:not(:last-child) { border-right: 0; }
+        .problem-title { font-size: 38px; }
+        .agent-grid, .automation-grid { grid-template-columns: 1fr; }
+        .process-steps { grid-template-columns: repeat(2,minmax(0,1fr)); }
+        .step-card::after { display: none; }
+        .products-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+        .verticals-grid, .contact-stats { grid-template-columns: 1fr; }
+        .contact-stat:not(:last-child) { border-right: 0; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 24px; margin-bottom: 24px; }
+        .footer-inner { grid-template-columns: 1fr; gap: 36px; }
+        .footer-bottom { grid-template-columns: 1fr; }
+        .footer-bottom p:last-child { text-align: left; }
+        .contact-title { font-size: 36px; }
+        #contact { padding-top: 88px; padding-bottom: 88px; }
+        .process-cta { padding: 32px 24px; }
+      }
+      @media (max-width: 480px) {
+        .section-inner, .stats-bar-inner, .contact-inner { padding-left: 18px; padding-right: 18px; }
+        .footer-inner, .footer-divider, .footer-bottom { padding-left: 18px; padding-right: 18px; }
+        .hero-title { font-size: clamp(36px, 12vw, 46px); }
+        .hero-subtitle { font-size: clamp(24px, 8vw, 30px); }
+        .section-title { font-size: clamp(30px, 9vw, 36px); }
+        .process-steps { grid-template-columns: 1fr; }
+        .automation-grid { grid-template-columns: 1fr; }
+        .products-grid { grid-template-columns: 1fr; }
+        .split-image { height: 360px; }
+        .agent-image { height: 360px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-nav">
+      <nav class="container nav-inner" aria-label="Primary navigation">
+        <a class="logo" href="#hero" aria-label="ARIZN home">
+          <img src="images/logo-arizn-preto-header.png" alt="ARIZN logo">
+        </a>
+        <div class="nav-links" id="navLinks">
+          <a href="#solution">Solutions</a>
+          <a href="#process">How It Works</a>
+          <a href="#products">Products</a>
+          <a href="/guides">Guides</a>
+          <a href="/blog">Blog</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <a class="nav-cta" href="https://assessment.arizn.co/">Talk to ARIZN</a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section id="hero" aria-labelledby="hero-title">
+        <img class="hero-bg-img" src="images/hero25.png" alt="" aria-hidden="true">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <span class="hero-badge"><span class="hero-badge-dot" aria-hidden="true"></span>AI Working 24/7 For Your Business</span>
+            <h1 class="hero-title" id="hero-title">You're Working More.<br>Just to Keep What You Have.</h1>
+            <h2 class="hero-subtitle">While you answer calls, chase quotes, and deal with no-shows —<br>your competitor already installed AI that does all of that automatically.</h2>
+            <p class="hero-copy">You don't learn anything. You don't do anything.<br>We install it. It runs. You get the results.</p>
+            <div class="hero-action">
+              <a class="hero-button" href="https://assessment.arizn.co/">Take the Free Assessment →</a>
+              <p class="hero-subtext">3 minutes. No credit card. See exactly where your business stands.</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-mobile-wrap">
+          <img class="hero-mobile-img" src="images/hero%20cell2.jpeg" alt="" aria-hidden="true">
+        </div>
+      </section>
+
+      <!-- Stats Bar -->
+      <div id="stats-bar">
+        <div class="stats-bar-inner">
+          <div class="stat-bar-item">
+            <p class="stat-bar-value">15h/week</p>
+            <p class="stat-bar-desc">recovered every week</p>
+          </div>
+          <div class="stat-bar-item">
+            <p class="stat-bar-value accent">$1,500/mo</p>
+            <p class="stat-bar-desc">saved vs. hiring a receptionist</p>
+          </div>
+          <div class="stat-bar-item">
+            <p class="stat-bar-value">8 sec</p>
+            <p class="stat-bar-desc">average response time — day or night</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <section id="results" aria-labelledby="results-title">
+        <div class="section-inner">
+          <div class="results-header">
+            <p class="section-label">REAL WORK. REAL RESULTS.</p>
+            <h2 class="section-title results-title" id="results-title">Already Delivering Results.</h2>
+            <p class="section-sub results-subtitle">Four businesses. Four different problems. Four solutions built exactly for them.</p>
+          </div>
+          <div class="case-grid">
+            <article class="case-card fade-in">
+              <div class="case-image case-img-neo" role="img" aria-label="Neo Peptide USA">
+                <span class="solution-tag">E-Commerce Website</span>
+              </div>
+              <div class="case-body">
+                <h3 class="case-name">Neo Peptide USA</h3>
+                <p class="case-meta">Health &amp; Supplements · Los Angeles, CA</p>
+                <hr class="case-divider">
+                <p class="built-label">What we built:</p>
+                <ul class="services-list">
+                  <li>Modern e-commerce website</li>
+                  <li>AI Support Agent 24/7</li>
+                  <li>Product catalog + checkout</li>
+                </ul>
+              </div>
+            </article>
+            <article class="case-card fade-in">
+              <div class="case-image case-img-prime" role="img" aria-label="Brazilian Prime Flavor">
+                <span class="solution-tag">Self-Service Order Kiosk</span>
+              </div>
+              <div class="case-body">
+                <h3 class="case-name">Brazilian Prime Flavor</h3>
+                <p class="case-meta">Restaurant · Los Angeles, CA</p>
+                <hr class="case-divider">
+                <p class="built-label">What we built:</p>
+                <ul class="services-list">
+                  <li>Self-service order kiosk</li>
+                  <li>Digital menu + ordering flow</li>
+                  <li>Kitchen integration</li>
+                </ul>
+              </div>
+            </article>
+            <article class="case-card fade-in">
+              <div class="case-image case-img-ricardo" role="img" aria-label="Ricardo Augusto Jewelry">
+                <span class="solution-tag">Google Business + CRM</span>
+              </div>
+              <div class="case-body">
+                <h3 class="case-name">Ricardo Augusto Jewelry</h3>
+                <p class="case-meta">Jewelry Store · São Paulo, Brazil</p>
+                <hr class="case-divider">
+                <p class="built-label">What we built:</p>
+                <ul class="services-list">
+                  <li>Google Business Profile optimization</li>
+                  <li>CRM &amp; customer management</li>
+                  <li>Review generation system</li>
+                </ul>
+              </div>
+            </article>
+            <article class="case-card fade-in">
+              <div class="case-image case-img-riocali" role="img" aria-label="Rio Cali Beauty Spa">
+                <span class="solution-tag">Full AI Infrastructure</span>
+              </div>
+              <div class="case-body">
+                <h3 class="case-name">Rio Cali Beauty Spa</h3>
+                <p class="case-meta">Beauty Spa · Los Angeles, CA</p>
+                <hr class="case-divider">
+                <p class="built-label">What we built:</p>
+                <ul class="services-list">
+                  <li>CRM with 1,500+ leads imported &amp; segmented</li>
+                  <li>No-Show Prevention — confirmation, 24h &amp; 2h reminders</li>
+                  <li>Review Request Agent post-session</li>
+                  <li>Referral Agent 30 days after service</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+          <div class="results-cta">
+            <p class="results-cta-text">Want results like these for your business?</p>
+            <a class="results-button" href="https://assessment.arizn.co/">Take the Free Assessment →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Problem -->
+      <section id="problem" aria-labelledby="problem-title">
+        <div class="section-inner">
+          <div class="problem-header">
+            <p class="problem-label">THE PROBLEM</p>
+            <h2 class="problem-title" id="problem-title">You're Not Losing Customers<br>Because of Your Work.</h2>
+            <p class="problem-subtitle">You're losing them because of missing systems.<br>Here's what that looks like.</p>
+          </div>
+          <div class="problem-split">
+            <div class="problem-side wrong problem-animate">
+              <p class="side-label">BUILT FOR ENTERPRISES</p>
+              <h3 class="side-title">The Wrong Way.</h3>
+              <div class="split-image" id="wrong-way-image" role="img" aria-label="Business losing customers"></div>
+              <ul class="point-list">
+                <li><span class="point-icon">✗</span><span>Enterprise software built for teams of 50 — not for you</span></li>
+                <li><span class="point-icon">✗</span><span>Missed calls with no follow-up. Leads gone forever.</span></li>
+                <li><span class="point-icon">✗</span><span>Unanswered DMs. Customers move on in minutes.</span></li>
+                <li><span class="point-icon">✗</span><span>Manual everything — bookings, reminders, follow-ups</span></li>
+                <li><span class="point-icon">✗</span><span>No system. No structure. No growth.</span></li>
+              </ul>
+            </div>
+            <div class="problem-divider" aria-hidden="true"></div>
+            <div class="problem-side right problem-animate">
+              <p class="side-label">BUILT FOR YOU</p>
+              <h3 class="side-title">The ARIZN Way.</h3>
+              <div class="split-image" id="arizn-way-image" role="img" aria-label="ARIZN AI agents working 24/7"></div>
+              <ul class="point-list">
+                <li><span class="point-icon">✓</span><span>AI agents answer, book, and follow up — 24/7</span></li>
+                <li><span class="point-icon">✓</span><span>Missed call? Customer gets a text in 8 seconds.</span></li>
+                <li><span class="point-icon">✓</span><span>Every DM answered automatically. Every time.</span></li>
+                <li><span class="point-icon">✓</span><span>Bookings, reminders, and follow-ups on autopilot</span></li>
+                <li><span class="point-icon">✓</span><span>Built only around what your business actually needs</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="problem-stats problem-animate">
+            <div class="problem-stat"><p class="stat-number">85%</p><p class="stat-label">of people never call back after a missed call</p></div>
+            <div class="problem-stat"><p class="stat-number accent">8 sec</p><p class="stat-label">average ARIZN agent response time</p></div>
+            <div class="problem-stat"><p class="stat-number">24/7</p><p class="stat-label">your business running — even while you sleep</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Solution -->
+      <section id="solution" aria-labelledby="solution-title">
+        <div class="section-inner">
+          <div class="solution-header solution-animate">
+            <p class="section-label">THE SOLUTION</p>
+            <h2 class="section-title solution-title" id="solution-title">Your Business. Running 24/7.<br>Without You Lifting a Finger.</h2>
+            <p class="section-sub solution-subtitle">ARIZN deploys AI agents that answer, book, follow up, and respond while you focus on the work.</p>
+          </div>
+          <div class="agent-grid">
+            <a class="agent-card solution-animate" href="/receptionist">
+              <div class="agent-content">
+                <span class="agent-badge">● Active 24/7</span>
+                <svg class="agent-icon" viewBox="0 0 72 72" aria-hidden="true"><circle class="pulse-ring" cx="36" cy="36" r="32" fill="none" stroke="#1A56FF" stroke-width="1.5" opacity="0.3"></circle><circle cx="36" cy="36" r="24" fill="none" stroke="#1A56FF" stroke-width="1.5" opacity="0.6"></circle><circle cx="36" cy="36" r="18" fill="#1A56FF"></circle><text x="36" y="42" fill="#FFF" font-family="Inter,sans-serif" font-size="18" font-weight="700" text-anchor="middle">AI</text></svg>
+                <h3 class="agent-title">24h Booking Agent</h3>
+                <p class="agent-description">Answers inquiries, qualifies leads, and books appointments automatically — day and night.</p>
+                <ul class="agent-features">
+                  <li>Responds to missed calls instantly</li>
+                  <li>Books appointments without you</li>
+                  <li>Sends automatic confirmations</li>
+                  <li>Follows up with cold leads</li>
+                </ul>
+                <div class="agent-image" id="booking-agent-image" role="img" aria-label="24h Booking Agent"></div>
+              </div>
+            </a>
+            <a class="agent-card solution-animate" href="/receptionist">
+              <div class="agent-content">
+                <span class="agent-badge">● Active 24/7</span>
+                <svg class="agent-icon" viewBox="0 0 72 72" aria-hidden="true"><circle class="pulse-ring" cx="36" cy="36" r="32" fill="none" stroke="#1A56FF" stroke-width="1.5" opacity="0.3"></circle><circle cx="36" cy="36" r="24" fill="none" stroke="#1A56FF" stroke-width="1.5" opacity="0.6"></circle><circle cx="36" cy="36" r="18" fill="#1A56FF"></circle><text x="36" y="42" fill="#FFF" font-family="Inter,sans-serif" font-size="18" font-weight="700" text-anchor="middle">AI</text></svg>
+                <h3 class="agent-title">24h Support Agent</h3>
+                <p class="agent-description">Handles customer questions, DMs, and follow-ups automatically across every channel.</p>
+                <ul class="agent-features">
+                  <li>Answers Instagram &amp; Facebook DMs</li>
+                  <li>Responds to common questions 24/7</li>
+                  <li>Re-engages customers automatically</li>
+                  <li>Never leaves a message unanswered</li>
+                </ul>
+                <div class="agent-image" id="support-agent-image" role="img" aria-label="24h Support Agent"></div>
+              </div>
+            </a>
+          </div>
+          <div class="automation-header solution-animate">
+            <h3 class="automation-title">Everything Else. All Connected.</h3>
+            <p class="automation-subtitle">Beyond the agents, ARIZN builds the full infrastructure your business needs.</p>
+          </div>
+          <div class="automation-grid">
+            <a class="automation-card solution-animate" href="/receptionist"><div class="automation-icon">📱</div><h4 class="automation-name">Missed Call Text-Back</h4><p class="automation-description">Instant automatic text when you miss a call. Recover 30–40% of lost leads.</p></a>
+            <a class="automation-card solution-animate" href="/receptionist"><div class="automation-icon" style="display:inline-flex;gap:6px"><span style="display:inline-flex;width:32px;height:32px;align-items:center;justify-content:center;border-radius:50%;background:radial-gradient(circle at 30% 110%,#FEDA75,#FA7E1E 25%,#D62976 50%,#962FBF 75%,#4F5BD5);color:#fff;font-size:17px;font-weight:700">◎</span><span style="display:inline-flex;width:32px;height:32px;align-items:center;justify-content:center;border-radius:50%;background:#1877F2;color:#fff;font-size:17px;font-weight:700;font-family:Arial,sans-serif">f</span></div><h4 class="automation-name">Auto-Reply Instagram &amp; Facebook</h4><p class="automation-description">Every DM answered automatically. Never lose a lead to slow response times.</p></a>
+            <a class="automation-card solution-animate" href="/review-agent"><div class="automation-icon">⭐</div><h4 class="automation-name">Review Automation</h4><p class="automation-description">Automatic review requests after every job. Build your reputation on autopilot.</p></a>
+            <a class="automation-card solution-animate" href="/no-show-prevention"><div class="automation-icon">📅</div><h4 class="automation-name">Online Booking</h4><p class="automation-description">24/7 self-service scheduling with automatic confirmations and reminders.</p></a>
+            <a class="automation-card solution-animate" href="/receptionist"><div class="automation-icon">✉️</div><h4 class="automation-name">Email Automation</h4><p class="automation-description">Welcome flows, follow-ups, and re-engagement sequences — fully automated.</p></a>
+            <a class="automation-card solution-animate" href="/no-show-prevention"><div class="automation-icon">💬</div><h4 class="automation-name">SMS Automation</h4><p class="automation-description">Appointment reminders, promotions, and follow-ups via text message.</p></a>
+          </div>
+          <div class="solution-cta solution-animate">
+            <p class="solution-cta-text">Not sure what your business needs?</p>
+            <a class="solution-button" href="https://assessment.arizn.co/">Take the Free Assessment →</a>
+            <p class="solution-cta-subtext">3 minutes. We'll tell you exactly what to build first.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section id="process" aria-labelledby="process-title">
+        <div class="section-inner">
+          <div class="process-header process-animate">
+            <p class="section-label">THE PROCESS</p>
+            <h2 class="section-title process-title" id="process-title">From First Contact to<br>Full Infrastructure.</h2>
+            <p class="process-subtitle">Four steps. Under 7 days. Results before your second month.</p>
+          </div>
+          <div class="process-steps">
+            <article class="step-card process-animate"><span class="step-ghost">01</span><div class="step-content"><div class="step-badge">Step 01</div><h3 class="step-title">Free Audit</h3><p class="step-description">We analyze your website, Google profile, and reviews in 10 minutes. You see exactly what's costing you customers — before committing to anything.</p><span class="step-tag">No commitment required</span></div></article>
+            <article class="step-card process-animate"><span class="step-ghost">02</span><div class="step-content"><div class="step-badge">Step 02</div><h3 class="step-title">Assessment</h3><p class="step-description">3 minutes. 20 questions. You get a score from 0 to 100 across 5 areas of your business. We show you exactly where the gaps are.</p><span class="step-tag">Takes 3 minutes</span></div></article>
+            <article class="step-card process-animate"><span class="step-ghost">03</span><div class="step-content"><div class="step-badge">Step 03</div><h3 class="step-title">Custom Proposal</h3><p class="step-description">Based on your score, we build a proposal around your exact needs. No packages. No upsells. Just what will move the needle for your business.</p><span class="step-tag">Built for your score</span></div></article>
+            <article class="step-card process-animate"><span class="step-ghost">04</span><div class="step-content"><div class="step-badge">Step 04</div><h3 class="step-title">Delivery</h3><p class="step-description">We execute in under 7 days. Your agents go live, your systems are running, and you start seeing results before paying your second month.</p><span class="step-tag">Live in under 7 days</span></div></article>
+          </div>
+          <div class="process-cta process-animate">
+            <h3 class="process-cta-title">Start with Step 01. It's Free.</h3>
+            <p class="process-cta-subtitle">No pitch. No commitment. Just your audit.</p>
+            <a class="process-button" href="https://assessment.arizn.co/">Take the Free Assessment →</a>
+            <p class="process-cta-note">3 minutes. No credit card. See exactly where your business stands.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Products -->
+      <section id="products" aria-labelledby="products-title">
+        <div class="section-inner">
+          <div class="products-animate">
+            <p class="section-label" style="color:#1A56FF">OUR SOLUTIONS</p>
+            <h2 class="section-title products-title" id="products-title">We Build What Your Business Needs.<br>Nothing More.</h2>
+            <p class="section-sub products-subtitle">Every solution is selected based on your assessment score.<br>You only pay for what actually moves the needle.</p>
+          </div>
+          <div class="products-grid" style="margin-top:56px">
+            <a class="product-card featured products-animate" style="--card-index:0" href="/receptionist"><span class="requested-badge">Most Requested</span><div class="product-icon icon-ai"><svg class="ai-icon" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.45"></circle><circle cx="16" cy="16" r="9" fill="currentColor"></circle><text x="16" y="20" fill="#FFF" font-family="Inter,sans-serif" font-size="9" font-weight="700" text-anchor="middle">AI</text></svg></div><p class="product-pain">Every missed call is a job going to your competitor.</p><p class="product-copy">AI answers, qualifies, and books — day and night.</p><p class="product-result">Never lose a lead after hours</p><span class="product-name">24h Booking Agent</span></a>
+            <a class="product-card featured products-animate" style="--card-index:1" href="/receptionist"><span class="requested-badge">Most Requested</span><div class="product-icon icon-ai"><svg class="ai-icon" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.45"></circle><circle cx="16" cy="16" r="9" fill="currentColor"></circle><text x="16" y="20" fill="#FFF" font-family="Inter,sans-serif" font-size="9" font-weight="700" text-anchor="middle">AI</text></svg></div><p class="product-pain">62% of callers never leave a voicemail. They just call someone else.</p><p class="product-copy">AI handles every question and DM across every channel, 24/7.</p><p class="product-result">Zero unanswered messages</p><span class="product-name">24h Support Agent</span></a>
+            <a class="product-card products-animate" style="--card-index:2" href="/receptionist"><div class="product-icon icon-phone">📱</div><p class="product-pain">You were on a job. They called. They booked your competitor.</p><p class="product-copy">Automatic text back in seconds — every time you miss a call.</p><p class="product-result">Recover 30–40% of lost leads</p><span class="product-name">Missed Call Text-Back</span></a>
+            <a class="product-card products-animate" style="--card-index:3" href="/receptionist"><div class="product-icon icon-social">💬</div><p class="product-pain">Your DMs are full. Your responses are slow. Leads are leaving.</p><p class="product-copy">Every DM answered automatically. No delays, no missed opportunities.</p><p class="product-result">Respond in seconds, not hours</p><span class="product-name">Auto-Reply Instagram &amp; Facebook</span></a>
+            <a class="product-card products-animate" style="--card-index:4" href="/receptionist"><div class="product-icon icon-email">✉️</div><p class="product-pain">Your best customers never hear from you again after the job.</p><p class="product-copy">Automated welcome flows, follow-ups, and re-engagement — running on their own.</p><p class="product-result">Stay top of mind without effort</p><span class="product-name">Email Automation</span></a>
+            <a class="product-card products-animate" style="--card-index:5" href="/no-show-prevention"><div class="product-icon icon-sms">💬</div><p class="product-pain">Customers no-show because nobody reminded them. That ends today.</p><p class="product-copy">Appointment reminders, confirmations, and follow-ups via text — automatic.</p><p class="product-result">Reduce no-shows by up to 80%</p><span class="product-name">SMS Automation</span></a>
+            <a class="product-card products-animate" style="--card-index:6" href="/website-gbp"><div class="product-icon icon-web">🌐</div><p class="product-pain">Your website looks like 2012. Customers judge in 3 seconds.</p><p class="product-copy">Mobile-first, fast, built to convert visitors into customers.</p><p class="product-result">Your best salesperson, 24/7</p><span class="product-name">Modern Website</span></a>
+            <a class="product-card products-animate" style="--card-index:7" href="/website-gbp"><div class="product-icon icon-google">📍</div><p class="product-pain">86% of people check Google before calling. What do they find?</p><p class="product-copy">Complete profile optimization so customers find you — not your competitor.</p><p class="product-result">Show up before your competitors</p><span class="product-name">Google Business Profile</span></a>
+            <a class="product-card products-animate" style="--card-index:8" href="/review-agent"><div class="product-icon icon-review">⭐</div><p class="product-pain">Your 4.2 stars is why they're choosing the business down the street.</p><p class="product-copy">Automatic review requests after every job or visit — no awkward ask.</p><p class="product-result">Build reputation on autopilot</p><span class="product-name">Review Management</span></a>
+            <a class="product-card products-animate" style="--card-index:9" href="/no-show-prevention"><div class="product-icon icon-booking">📅</div><p class="product-pain">Your calendar has gaps that could be appointments.</p><p class="product-copy">24/7 self-service scheduling with automatic confirmations and reminders.</p><p class="product-result">Fill your calendar while you sleep</p><span class="product-name">Online Booking</span></a>
+            <a class="product-card products-animate" style="--card-index:10" href="/receptionist"><div class="product-icon icon-crm">👥</div><p class="product-pain">1,000 leads in a spreadsheet is not a business. It's a graveyard.</p><p class="product-copy">Full customer management with history, follow-up, and pipeline.</p><p class="product-result">Never lose track of a lead</p><span class="product-name">CRM Dashboard</span></a>
+            <a class="product-card products-animate" style="--card-index:11" href="/receptionist"><div class="product-icon icon-revenue">📈</div><p class="product-pain">You don't know what's working. So you keep paying for what's not.</p><p class="product-copy">Real-time visibility into sales, bookings, and business performance.</p><p class="product-result">Know your numbers at a glance</p><span class="product-name">Revenue Dashboard</span></a>
+          </div>
+          <div class="products-cta products-animate">
+            <h3 class="products-cta-title">Not sure what your business needs?</h3>
+            <p class="products-cta-copy">Take the free assessment. We'll tell you exactly<br>which of these will move the needle for your business.</p>
+            <a class="products-button" href="https://assessment.arizn.co/">Take the Free Assessment →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Verticals -->
+      <section id="verticals" aria-labelledby="verticals-title">
+        <div class="section-inner">
+          <div>
+            <p class="section-label">WHO IT'S FOR</p>
+            <h2 class="section-title verticals-title" id="verticals-title">Built for the Businesses<br>That Actually Work.</h2>
+            <p class="section-sub verticals-subtitle">If you run a local business and you're tired of losing customers to slower systems — ARIZN was built for you.</p>
+          </div>
+          <div class="verticals-grid">
+            <a class="vertical-card home verticals-animate" href="/hvac">
+              <div class="vertical-icon">🔧</div>
+              <h3 class="vertical-name">Home Services</h3>
+              <p class="vertical-industries">HVAC · Plumbers · Electricians</p>
+              <p class="vertical-copy">511,000+ businesses across the US rely on Google to find customers. Missed calls = missed revenue. ARIZN makes sure no lead slips through.</p>
+              <div class="vertical-stat"><p class="vstat-value">85%</p><p class="vstat-label">of missed calls never call back</p></div>
+            </a>
+            <a class="vertical-card dental verticals-animate" href="/dentist">
+              <div class="vertical-icon">🦷</div>
+              <h3 class="vertical-name">Dentists</h3>
+              <p class="vertical-industries">General · Cosmetic · Orthodontics</p>
+              <p class="vertical-copy">179,000 dental practices competing for the same patients. Reviews and online booking are the difference between a full schedule and empty chairs.</p>
+              <div class="vertical-stat"><p class="vstat-value">3×</p><p class="vstat-label">more patients book online than by phone</p></div>
+            </a>
+            <a class="vertical-card auto verticals-animate" href="/auto-repair">
+              <div class="vertical-icon">🚗</div>
+              <h3 class="vertical-name">Auto Repair</h3>
+              <p class="vertical-industries">Independent Shops · Tire Centers · Body Shops</p>
+              <p class="vertical-copy">307,000 shops — most with zero digital systems. Customers search Google, read reviews, and book instantly. If you're not there, your competitor is.</p>
+              <div class="vertical-stat"><p class="vstat-value">40%</p><p class="vstat-label">of leads lost to slow response times</p></div>
+            </a>
+          </div>
+          <p class="verticals-note">Also working with salons, clinics, gyms, restaurants, and more.</p>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" aria-labelledby="contact-title">
+        <div class="contact-inner">
+          <div class="contact-animate">
+            <p class="contact-label">GET STARTED</p>
+            <h2 class="contact-title" id="contact-title">Find Out Exactly Where<br>Your Business Is Losing Money.</h2>
+            <p class="contact-subtitle">Take the free 3-minute assessment.<br>Get your score. See exactly what to fix first.</p>
+            <p class="contact-slogan">The Future of Local Business.</p>
+            <a class="contact-button" href="https://assessment.arizn.co/">Take the Free Assessment →</a>
+            <p class="contact-note">3 minutes. No credit card. Instant results.</p>
+          </div>
+          <div class="contact-stats contact-animate">
+            <div class="contact-stat"><p class="contact-stat-number">3 min</p><p class="contact-stat-label">to complete the assessment</p></div>
+            <div class="contact-stat"><p class="contact-stat-number accent">0–100</p><p class="contact-stat-label">infrastructure score</p></div>
+            <div class="contact-stat"><p class="contact-stat-number">&lt; 7 days</p><p class="contact-stat-label">from assessment to delivery</p></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer footer-animate">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-logo">ARIZN<span>•</span></div>
+          <p class="footer-tagline">The Future of Local Business.</p>
+          <p class="footer-description">Business infrastructure for local businesses. Built like a big company.</p>
+        </div>
+        <nav aria-label="Footer solutions">
+          <p class="footer-col-title">SOLUTIONS</p>
+          <a class="footer-link" href="/receptionist">ARIZN Receptionist</a>
+          <a class="footer-link" href="/review-agent">Review Request Agent</a>
+          <a class="footer-link" href="/no-show-prevention">No-Show Prevention</a>
+          <a class="footer-link" href="/quote-recovery">Quote Recovery</a>
+          <a class="footer-link" href="/website-gbp">Website + GBP</a>
+        </nav>
+        <nav aria-label="Footer company">
+          <p class="footer-col-title">COMPANY</p>
+          <a class="footer-link" href="#process">How It Works</a>
+          <a class="footer-link" href="#verticals">Who It's For</a>
+          <a class="footer-link" href="/guides">Guides</a>
+          <a class="footer-link" href="/blog">Blog</a>
+          <a class="footer-link" href="https://assessment.arizn.co/">Take the Assessment</a>
+        </nav>
+      </div>
+      <hr class="footer-divider">
+      <div class="footer-bottom">
+        <p>© 2026 ARIZN. All rights reserved.</p>
+        <p>Built like a big company.</p>
+      </div>
+    </footer>
+
+    <script>
+      const menuToggle = document.getElementById("menuToggle");
+      menuToggle.addEventListener("click", () => {
+        const isOpen = document.body.classList.toggle("nav-open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+      });
+      document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener("click", () => {
+          document.body.classList.remove("nav-open");
+          menuToggle.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      // Intersection observers
+      function observe(selector, cls) {
+        const els = document.querySelectorAll(selector);
+        const obs = new IntersectionObserver((entries, o) => {
+          entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add(cls); o.unobserve(e.target); } });
+        }, { threshold: 0.15 });
+        els.forEach(el => obs.observe(el));
+      }
+
+      observe("#results .fade-in", "visible");
+      observe("#solution .solution-animate", "visible");
+      observe("#process .process-animate", "visible");
+      observe("#products .products-animate", "visible");
+      observe("#verticals .verticals-animate", "visible");
+      observe("#contact .contact-animate", "visible");
+      observe(".site-footer.footer-animate", "visible");
+      observe(".step-card", "visible");
+
+      const problemSection = document.getElementById("problem");
+      new IntersectionObserver((entries, o) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visible"); o.unobserve(e.target); } });
+      }, { threshold: 0.2 }).observe(problemSection);
+    </script>
+  </body>
+</html>

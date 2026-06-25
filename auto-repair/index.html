@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARIZN for Auto Repair Shops — 40% of Leads Lost to Slow Response</title>
+  <meta name="description" content="40% of auto repair leads are lost to slow response times. ARIZN answers every inquiry, books every appointment, and builds your Google reviews automatically.">
+  <link rel="canonical" href="https://arizn.co/auto-repair">
+  <meta property="og:title" content="40% of Auto Repair Leads Lost to Slow Response — ARIZN Fixes It">
+  <meta property="og:description" content="AI receptionist that answers inquiries in seconds, books appointments 24/7, and builds Google reviews for auto repair shops.">
+  <meta property="og:url" content="https://arizn.co/auto-repair">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"ARIZN for Auto Repair Shops","description":"AI receptionist and automation platform for auto repair businesses","provider":{"@type":"Organization","name":"ARIZN","url":"https://arizn.co"},"areaServed":"United States"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #F5F5F7; --white: #FFFFFF; --dark: #0A0A0A; --text: #1d1d1f; --body: #6e6e73; --muted: #86868b; --accent: #F5A623; --accent-blue: #1A56FF; --border: #E8E8E8; --btn-grad: linear-gradient(135deg, #5f6064 0%, #2f3034 42%, #111113 100%); --btn-grad-hover: linear-gradient(315deg, #5f6064 0%, #2f3034 42%, #111113 100%); --font-head: "Inter", -apple-system, "SF Pro Text", sans-serif; --font-body: "Inter", -apple-system, "SF Pro Text", sans-serif; --radius: 16px; --radius-pill: 980px; --max: 1140px; --pad: 48px; }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--body); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+    .site-nav { position: fixed; top: 0; left: 0; z-index: 100; width: 100%; background: rgba(245,245,247,0.86); backdrop-filter: blur(20px) saturate(180%); }
+    .nav-inner { display: grid; min-height: 64px; align-items: center; grid-template-columns: 1fr auto 1fr; gap: 24px; }
+    .logo { display: inline-flex; align-items: center; justify-self: start; width: 160px; height: 38px; overflow: hidden; }
+    .logo img { width: 100%; height: 100%; object-fit: contain; object-position: left center; }
+    .nav-links { display: flex; align-items: center; justify-content: center; gap: 32px; color: var(--text); font-size: 14px; }
+    .nav-links a:hover { color: var(--accent-blue); }
+    .nav-cta { justify-self: end; padding: 8px 20px; background: var(--btn-grad); border-radius: var(--radius-pill); color: #fff; font-size: 14px; font-weight: 500; }
+    .nav-cta:hover { background: var(--btn-grad-hover); }
+    .menu-toggle { display: none; width: 40px; height: 40px; align-items: center; justify-content: center; flex-direction: column; gap: 5px; justify-self: end; background: transparent; border: 0; cursor: pointer; }
+    .menu-toggle span, .menu-toggle::before, .menu-toggle::after { content: ""; width: 18px; height: 1.5px; background: var(--text); transition: opacity .15s, transform .15s; }
+    body.nav-open .menu-toggle span { opacity: 0; }
+    body.nav-open .menu-toggle::before { transform: translateY(6.5px) rotate(45deg); }
+    body.nav-open .menu-toggle::after { transform: translateY(-6.5px) rotate(-45deg); }
+    .hero { padding: 144px 0 96px; background: #0C0C0C; }
+    .hero-vertical { margin: 0 0 16px; color: rgba(255,255,255,.4); font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
+    .hero-vertical::before { content: "🚗"; }
+    .hero-title { margin: 0; color: #fff; font-family: var(--font-head); font-size: 62px; font-weight: 800; letter-spacing: -.04em; line-height: 1.04; }
+    .hero-title span { color: var(--accent); }
+    .hero-sub { margin: 20px 0 0; color: rgba(255,255,255,.6); font-size: 20px; max-width: 600px; line-height: 1.6; }
+    .hero-cta { display: flex; align-items: center; gap: 16px; margin-top: 40px; flex-wrap: wrap; }
+    .btn-primary { display: inline-flex; align-items: center; justify-content: center; padding: 16px 36px; background: var(--btn-grad); border: 0; border-radius: var(--radius-pill); color: #fff; font-size: 16px; font-weight: 600; transition: background .2s, transform .2s; }
+    .btn-primary:hover { background: var(--btn-grad-hover); transform: translateY(-1px); }
+    .hero-note { color: rgba(255,255,255,.35); font-size: 13px; }
+    .hero-loss-calc { margin-top: 64px; padding: 40px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); border-radius: 20px; display: grid; grid-template-columns: repeat(3,1fr); gap: 0; }
+    .lc-item { padding: 0 32px; }
+    .lc-item + .lc-item { border-left: 1px solid rgba(255,255,255,.08); }
+    .lc-label { margin: 0; color: rgba(255,255,255,.35); font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+    .lc-val { margin: 8px 0 0; color: #fff; font-family: var(--font-head); font-size: 40px; font-weight: 800; line-height: 1; }
+    .lc-val.bad { color: #EF4444; }
+    .lc-val.good { color: var(--accent); }
+    .lc-desc { margin: 6px 0 0; color: rgba(255,255,255,.4); font-size: 13px; line-height: 1.5; }
+    .section-label { margin: 0 0 10px; color: var(--accent); font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+    .section-title { margin: 0; font-family: var(--font-head); font-size: 44px; font-weight: 900; color: var(--text); letter-spacing: -.03em; line-height: 1.08; }
+    .section-body { margin: 16px 0 0; font-size: 17px; line-height: 1.7; color: var(--body); }
+    .problem { padding: 96px 0; background: var(--bg); }
+    .problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 48px; }
+    .problem-card { padding: 28px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); }
+    .problem-card.bad { border-left: 3px solid #EF4444; }
+    .pc-header { margin: 0 0 12px; color: var(--text); font-size: 17px; font-weight: 700; }
+    .pc-body { margin: 0; color: var(--body); font-size: 15px; line-height: 1.65; }
+    .pc-stat { margin: 16px 0 0; padding: 12px 16px; background: rgba(239,68,68,.06); border-radius: 10px; color: #EF4444; font-size: 14px; font-weight: 600; }
+    .solution { padding: 96px 0; background: var(--white); }
+    .solution-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; margin-top: 56px; }
+    .feat-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 16px; }
+    .feat-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: var(--text); line-height: 1.5; }
+    .feat-list li::before { content: "✓"; color: var(--accent-blue); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .dark-card { background: #0C0C0C; border-radius: 20px; padding: 40px; border: 1px solid rgba(255,255,255,0.08); display: grid; gap: 20px; }
+    .dark-card-item { padding: 20px; background: rgba(255,255,255,0.04); border-radius: 12px; border: 1px solid rgba(255,255,255,0.06); }
+    .dci-label { margin: 0; color: rgba(255,255,255,.4); font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+    .dci-val { margin: 6px 0 0; color: #fff; font-size: 22px; font-weight: 700; }
+    .dci-desc { margin: 4px 0 0; color: rgba(255,255,255,.5); font-size: 13px; }
+    .products { padding: 96px 0; background: var(--bg); }
+    .products-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 48px; }
+    .prod-card { padding: 28px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); transition: transform .2s, box-shadow .2s; display: block; color: inherit; }
+    .prod-card:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(0,0,0,.08); }
+    .prod-icon { font-size: 32px; margin-bottom: 16px; }
+    .prod-name { margin: 0 0 8px; color: var(--text); font-size: 17px; font-weight: 700; }
+    .prod-body { margin: 0; color: var(--body); font-size: 14px; line-height: 1.65; }
+    .prod-result { margin: 12px 0 0; color: var(--accent-blue); font-size: 13px; font-weight: 600; }
+    .final-cta { padding: 120px 0; background: #0C0C0C; text-align: center; }
+    .final-cta-title { margin: 0; color: #fff; font-family: var(--font-head); font-size: 48px; font-weight: 800; letter-spacing: -.03em; line-height: 1.08; }
+    .final-cta-sub { margin: 16px auto 0; color: rgba(255,255,255,.5); font-size: 19px; max-width: 500px; line-height: 1.6; }
+    .final-cta .btn-primary { margin-top: 40px; font-size: 17px; padding: 18px 48px; }
+    .final-cta-note { margin: 14px 0 0; color: rgba(255,255,255,.3); font-size: 13px; }
+    .site-footer { background: #0A0A0A; padding: 64px 0 40px; border-top: 1px solid rgba(255,255,255,.06); }
+    .footer-inner { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 64px; margin-bottom: 48px; }
+    .footer-logo { color: #fff; font-size: 22px; font-weight: 800; }
+    .footer-logo span { color: var(--accent-blue); }
+    .footer-tagline { margin: 8px 0 0; color: rgba(255,255,255,.4); font-size: 14px; font-style: italic; }
+    .footer-desc { margin: 16px 0 0; color: rgba(255,255,255,.3); font-size: 13px; line-height: 1.7; max-width: 260px; }
+    .footer-col-title { margin: 0 0 20px; color: rgba(255,255,255,.3); font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+    .footer-link { display: block; margin-bottom: 10px; color: rgba(255,255,255,.5); font-size: 14px; transition: color .15s; }
+    .footer-link:hover { color: rgba(255,255,255,.9); }
+    .footer-divider { max-width: var(--max); margin: 0 auto 32px; padding: 0 var(--pad); border: 0; border-top: 1px solid rgba(255,255,255,.06); }
+    .footer-bottom { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); display: grid; grid-template-columns: 1fr 1fr; }
+    .footer-bottom p { margin: 0; color: rgba(255,255,255,.25); font-size: 13px; }
+    .footer-bottom p:last-child { text-align: right; }
+    .fade-in { opacity: 0; transform: translateY(18px); transition: opacity .55s, transform .55s; }
+    .fade-in.visible { opacity: 1; transform: none; }
+    @media (max-width: 768px) {
+      .hero { padding: 112px 0 72px; } .hero-title { font-size: 40px; }
+      .hero-loss-calc { grid-template-columns: 1fr; gap: 24px; padding: 28px; }
+      .lc-item + .lc-item { border-left: 0; border-top: 1px solid rgba(255,255,255,.08); padding-top: 24px; }
+      .problem-grid, .solution-grid, .products-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; gap: 36px; } .footer-bottom { grid-template-columns: 1fr; }
+      .footer-bottom p:last-child { text-align: left; }
+      .nav-inner { display: flex; justify-content: space-between; }
+      .nav-links { position: fixed; top: 64px; inset-inline: 0; display: grid; padding: 12px 24px 18px; background: rgba(251,251,253,.96); border-bottom: 1px solid rgba(0,0,0,.08); opacity: 0; pointer-events: none; transform: translateY(-10px); transition: opacity .15s, transform .15s; backdrop-filter: blur(20px); }
+      .nav-links a { padding: 12px 0; }
+      body.nav-open .nav-links { opacity: 1; pointer-events: auto; transform: none; }
+      .nav-cta { display: none; } .menu-toggle { display: flex; }
+      .section-title { font-size: 34px; } .final-cta-title { font-size: 34px; }
+      .wrap { padding: 0 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-nav">
+    <nav class="wrap nav-inner" aria-label="Primary navigation">
+      <a class="logo" href="/" aria-label="ARIZN home"><img src="/images/logo-arizn-preto-header.png" alt="ARIZN logo"></a>
+      <div class="nav-links" id="navLinks">
+        <a href="/#solution">Solutions</a><a href="/#process">How It Works</a><a href="/#products">Products</a><a href="/guides">Guides</a><a href="/#contact">Contact</a>
+      </div>
+      <a class="nav-cta" href="https://assessment.arizn.co/">Talk to ARIZN</a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <p class="hero-vertical">Auto Repair Shops</p>
+        <h1 class="hero-title"><span>40% of Your Leads</span><br>Lost to Slow Response.</h1>
+        <p class="hero-sub">When someone needs a repair, they call 3 shops and go with whoever answers first. If you're the second call back, that customer is already at your competitor's bay.</p>
+        <div class="hero-cta">
+          <a class="btn-primary" href="https://assessment.arizn.co/">Take the Free Assessment →</a>
+          <span class="hero-note">3 minutes. See your exact revenue loss.</span>
+        </div>
+        <div class="hero-loss-calc">
+          <div class="lc-item"><p class="lc-label">Leads Lost to Slow Response</p><p class="lc-val bad">40%</p><p class="lc-desc">Of inquiries go to the first shop that responds</p></div>
+          <div class="lc-item"><p class="lc-label">Average Repair Ticket</p><p class="lc-val">$480</p><p class="lc-desc">Typical auto repair job value</p></div>
+          <div class="lc-item"><p class="lc-label">Shops Without Digital Systems</p><p class="lc-val bad">73%</p><p class="lc-desc">Of independent shops operate with zero automation</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="problem">
+      <div class="wrap">
+        <div class="fade-in">
+          <p class="section-label">THE PROBLEM</p>
+          <h2 class="section-title">307,000 Shops. Most Without<br>a Single Digital System.</h2>
+          <p class="section-body" style="max-width:640px">Auto repair is a highly competitive, trust-driven business. Customers search Google, read reviews, and call whoever shows up first with the most stars. If your digital presence is weak, you're invisible — even if you do better work.</p>
+        </div>
+        <div class="problem-grid">
+          <div class="problem-card bad fade-in"><h3 class="pc-header">First Response Wins</h3><p class="pc-body">When a car breaks down, customers need it fixed now. They call 2–3 shops and book the first one that responds. If you don't answer, they're gone.</p><p class="pc-stat">40% of leads lost to slow response</p></div>
+          <div class="problem-card bad fade-in"><h3 class="pc-header">No Google Review System</h3><p class="pc-body">Your shop does great work but has 22 reviews. Your competitor across town has 340. Customers trust the numbers — and they call them first.</p><p class="pc-stat">Shops with 100+ reviews get 3× more calls</p></div>
+          <div class="problem-card bad fade-in"><h3 class="pc-header">No-Shows and Dropoff Gaps</h3><p class="pc-body">Customers don't show up for scheduled drop-offs. You ordered parts, cleared a bay, and now you're sitting idle waiting for someone who isn't coming.</p><p class="pc-stat">Average no-show cost: $480 per missed bay</p></div>
+          <div class="problem-card bad fade-in"><h3 class="pc-header">Cold Quote Pipeline</h3><p class="pc-body">You gave a diagnostic quote. They said "let me think about it." Never heard back. That $800 repair went to someone who followed up.</p><p class="pc-stat">80% of deals need 5+ follow-ups to close</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="solution">
+      <div class="wrap">
+        <div class="fade-in">
+          <p class="section-label">THE SOLUTION</p>
+          <h2 class="section-title">ARIZN Responds First.<br>Every Time.</h2>
+        </div>
+        <div class="solution-grid">
+          <div class="fade-in">
+            <p class="section-body">ARIZN's AI agent responds to every inquiry in seconds — whether they call, text, DM on Instagram, or find you on Google. It qualifies the lead, books the drop-off, and sends reminders. Your technicians stay focused on cars. ARIZN handles everything else.</p>
+            <ul class="feat-list" style="margin-top:28px">
+              <li>Instant text-back on missed calls (under 8 seconds)</li>
+              <li>AI books drop-off appointments automatically</li>
+              <li>Confirmation + 24h + 2h reminders for drop-offs</li>
+              <li>Auto-reply to Instagram and Facebook DMs</li>
+              <li>Review requests after every completed repair</li>
+              <li>Quote follow-up sequence for diagnostics sent</li>
+            </ul>
+          </div>
+          <div class="dark-card fade-in">
+            <div class="dark-card-item"><p class="dci-label">RESPONSE TIME</p><p class="dci-val">Under 8 seconds</p><p class="dci-desc">vs. industry average of 4+ hours</p></div>
+            <div class="dark-card-item"><p class="dci-label">LEAD RECOVERY</p><p class="dci-val">30–40%</p><p class="dci-desc">Of missed calls converted to bookings</p></div>
+            <div class="dark-card-item"><p class="dci-label">REVIEW GROWTH</p><p class="dci-val">4× faster</p><p class="dci-desc">Google review generation vs. manual asking</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="products">
+      <div class="wrap">
+        <div class="fade-in">
+          <p class="section-label">WHAT WE BUILD FOR AUTO REPAIR</p>
+          <h2 class="section-title">The Infrastructure Your Shop<br>Has Always Been Missing.</h2>
+        </div>
+        <div class="products-grid">
+          <a class="prod-card fade-in" href="/receptionist"><div class="prod-icon">📱</div><h3 class="prod-name">24/7 AI Receptionist</h3><p class="prod-body">Instant missed call text-back. AI that books drop-offs and answers questions while you're in the bay.</p><p class="prod-result">→ Respond before your competitor picks up</p></a>
+          <a class="prod-card fade-in" href="/review-agent"><div class="prod-icon">⭐</div><h3 class="prod-name">Review Request Agent</h3><p class="prod-body">Automatic review requests after every repair completion. Build trust at scale.</p><p class="prod-result">→ 4× more Google reviews, automatically</p></a>
+          <a class="prod-card fade-in" href="/quote-recovery"><div class="prod-icon">📄</div><h3 class="prod-name">Quote Recovery</h3><p class="prod-body">Follow-up sequence for every diagnostic quote. Day 2, day 5, day 10 — professionally persistent.</p><p class="prod-result">→ Recover 20–40% of cold quotes</p></a>
+          <a class="prod-card fade-in" href="/no-show-prevention"><div class="prod-icon">📅</div><h3 class="prod-name">No-Show Prevention</h3><p class="prod-body">Confirmation + 24h + 2h reminders for every drop-off appointment. Keep your bays full.</p><p class="prod-result">→ Reduce no-shows by up to 80%</p></a>
+          <a class="prod-card fade-in" href="/website-gbp"><div class="prod-icon">📍</div><h3 class="prod-name">Google Business Profile</h3><p class="prod-body">Full GBP optimization. Photos, services, hours, posts — managed for you monthly.</p><p class="prod-result">→ Show up when customers search nearby</p></a>
+          <a class="prod-card fade-in" href="/receptionist"><div class="prod-icon">💬</div><h3 class="prod-name">Instagram &amp; Facebook DMs</h3><p class="prod-body">Every social DM answered automatically. Quote requests, questions, bookings — all handled.</p><p class="prod-result">→ Never miss a social media lead</p></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="wrap">
+        <h2 class="final-cta-title">Stop Being the Second Call.<br>Start Winning Every Lead.</h2>
+        <p class="final-cta-sub">Take the free 3-minute assessment. See exactly where your shop is losing customers — and how to fix it this week.</p>
+        <a class="btn-primary" href="https://assessment.arizn.co/">Take the Free Assessment →</a>
+        <p class="final-cta-note">3 minutes. No credit card. Instant results.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div><div class="footer-logo">ARIZN<span>•</span></div><p class="footer-tagline">The Future of Local Business.</p><p class="footer-desc">Business infrastructure for local businesses. Built like a big company.</p></div>
+      <nav aria-label="Footer solutions"><p class="footer-col-title">SOLUTIONS</p><a class="footer-link" href="/receptionist">ARIZN Receptionist</a><a class="footer-link" href="/review-agent">Review Request Agent</a><a class="footer-link" href="/no-show-prevention">No-Show Prevention</a><a class="footer-link" href="/quote-recovery">Quote Recovery</a><a class="footer-link" href="/website-gbp">Website + GBP</a></nav>
+      <nav aria-label="Footer company"><p class="footer-col-title">COMPANY</p><a class="footer-link" href="/#process">How It Works</a><a class="footer-link" href="/#verticals">Who It's For</a><a class="footer-link" href="/guides">Guides</a><a class="footer-link" href="/blog">Blog</a><a class="footer-link" href="https://assessment.arizn.co/">Take the Assessment</a></nav>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom"><p>© 2026 ARIZN. All rights reserved.</p><p>Built like a big company.</p></div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    menuToggle.addEventListener("click", () => { const open = document.body.classList.toggle("nav-open"); menuToggle.setAttribute("aria-expanded", String(open)); });
+    const obs = new IntersectionObserver((e, o) => { e.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); o.unobserve(entry.target); } }); }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>

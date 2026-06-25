@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Ads MCP Complete Setup Guide | ARIZN</title>
+    <meta name="description" content="Give Claude full control of your Meta Ads account in 60 seconds. No agency. No code. No Ads Manager.">
+    <meta name="robots" content="index, follow, max-snippet:-1">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://arizn.co/guides/meta-ads-mcp">
+    <meta property="og:title" content="Meta Ads MCP Complete Setup Guide | ARIZN">
+    <meta property="og:description" content="Give Claude full control of your Meta Ads account in 60 seconds. No agency. No code. No Ads Manager.">
+    <meta property="og:url" content="https://arizn.co/guides/meta-ads-mcp">
+    <meta property="og:site_name" content="ARIZN">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="theme-color" content="#1A56FF">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --color-bg: #F5F5F7;
+        --color-white: #FFFFFF;
+        --color-dark: #0C0C0C;
+        --color-text: #1d1d1f;
+        --color-body: #6e6e73;
+        --color-muted: #86868b;
+        --color-border: #E8E8E8;
+        --color-accent: #1a56ff;
+        --color-accent-soft: #edf3ff;
+        --gradient-button-gray: linear-gradient(135deg, #5f6064 0%, #2f3034 42%, #111113 100%);
+        --gradient-button-gray-hover: linear-gradient(315deg, #5f6064 0%, #2f3034 42%, #111113 100%);
+        --font-main: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+        --container-max: 1140px;
+        --container-pad: 48px;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        background: var(--color-bg);
+        color: var(--color-body);
+        font-family: var(--font-main);
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      body.nav-open { overflow: hidden; }
+      a { color: inherit; text-decoration: none; }
+      button { font: inherit; }
+
+      /* ── Nav ── */
+      .site-nav {
+        position: fixed;
+        top: 0; left: 0;
+        z-index: 100;
+        width: 100%;
+        background: rgba(245, 245, 247, 0.86);
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+      }
+
+      .nav-inner {
+        display: grid;
+        width: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+        padding: 0 32px;
+        min-height: 64px;
+        align-items: center;
+        grid-template-columns: 1fr auto 1fr;
+        gap: 24px;
+      }
+
+      .logo {
+        display: inline-flex;
+        align-items: center;
+        justify-self: start;
+        width: 160px; height: 38px;
+        overflow: hidden;
+      }
+
+      .logo img { width: 100%; height: 100%; object-fit: contain; object-position: left center; }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        color: var(--color-text);
+        font-size: 14px; font-weight: 400; line-height: 1;
+      }
+
+      .nav-links a { transition: color 0.15s ease; }
+      .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--color-accent); }
+
+      .nav-cta {
+        justify-self: end;
+        padding: 8px 20px;
+        background: var(--gradient-button-gray);
+        border-radius: 980px;
+        color: #fff; font-size: 14px; font-weight: 500; line-height: 1;
+        transition: background 0.2s ease;
+      }
+
+      .nav-cta:hover { background: var(--gradient-button-gray-hover); }
+
+      .menu-toggle {
+        display: none;
+        width: 40px; height: 40px;
+        align-items: center; justify-content: center; flex-direction: column;
+        gap: 5px; justify-self: end;
+        background: transparent; border: 0; cursor: pointer;
+      }
+
+      .menu-toggle span,
+      .menu-toggle::before,
+      .menu-toggle::after {
+        content: "";
+        width: 18px; height: 1.5px;
+        background: var(--color-text);
+        transition: opacity 0.15s ease, transform 0.15s ease;
+      }
+
+      body.nav-open .menu-toggle span { opacity: 0; }
+      body.nav-open .menu-toggle::before { transform: translateY(6.5px) rotate(45deg); }
+      body.nav-open .menu-toggle::after  { transform: translateY(-6.5px) rotate(-45deg); }
+
+      /* ── Container ── */
+      .container {
+        width: 100%;
+        max-width: var(--container-max);
+        margin: 0 auto;
+        padding: 0 var(--container-pad);
+      }
+
+      /* ── Hero ── */
+      #guide-hero {
+        background: var(--color-bg);
+        padding: 140px 0 72px;
+      }
+
+      .breadcrumb {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 24px;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--color-muted);
+      }
+
+      .breadcrumb a { color: var(--color-accent); transition: opacity 0.15s; }
+      .breadcrumb a:hover { opacity: 0.75; }
+
+      .guide-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 18px;
+        color: var(--color-accent);
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .tag-new {
+        display: inline-flex;
+        align-items: center;
+        padding: 4px 9px;
+        background: #111113;
+        border-radius: 999px;
+        color: #fff;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        line-height: 1;
+      }
+
+      .guide-title {
+        margin: 0;
+        color: var(--color-text);
+        font-size: clamp(40px, 5.5vw, 64px);
+        font-weight: 700;
+        letter-spacing: -0.04em;
+        line-height: 1.05;
+      }
+
+      .guide-subtitle {
+        max-width: 600px;
+        margin: 18px 0 0;
+        color: var(--color-body);
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 1.6;
+      }
+
+      /* ── Stats bar ── */
+      #guide-stats {
+        background: var(--color-white);
+        border-top: 1px solid var(--color-border);
+        border-bottom: 1px solid var(--color-border);
+        padding: 32px 0;
+      }
+
+      .stats-row {
+        display: flex;
+        align-items: center;
+        gap: 0;
+      }
+
+      .stat-item {
+        flex: 1;
+        padding: 0 32px;
+        border-right: 1px solid var(--color-border);
+      }
+
+      .stat-item:first-child { padding-left: 0; }
+      .stat-item:last-child { border-right: none; }
+
+      .stat-value {
+        margin: 0;
+        color: var(--color-text);
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        line-height: 1;
+      }
+
+      .stat-label {
+        margin: 6px 0 0;
+        color: var(--color-muted);
+        font-size: 13px;
+        font-weight: 500;
+      }
+
+      /* ── Body ── */
+      #guide-body {
+        background: var(--color-white);
+        padding: 64px 0 96px;
+      }
+
+      .guide-layout {
+        display: grid;
+        grid-template-columns: 300px minmax(0, 1fr);
+        gap: 40px;
+        align-items: start;
+      }
+
+      /* ── Sidebar ── */
+      .guide-sidebar {
+        position: sticky;
+        top: 88px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .sidebar-card {
+        padding: 28px;
+        background: var(--color-white);
+        border: 1px solid var(--color-border);
+        border-radius: 16px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+      }
+
+      .sidebar-eyebrow {
+        margin: 0 0 10px;
+        color: var(--color-muted);
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .sidebar-title {
+        margin: 0;
+        color: var(--color-text);
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+      }
+
+      .sidebar-copy {
+        margin: 10px 0 0;
+        color: var(--color-body);
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .connector-url {
+        display: block;
+        margin-top: 16px;
+        padding: 12px 14px;
+        overflow-wrap: anywhere;
+        background: var(--color-accent-soft);
+        border: 1px solid rgba(26, 86, 255, 0.14);
+        border-radius: 10px;
+        color: var(--color-accent);
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 1.4;
+      }
+
+      /* ── Content ── */
+      .guide-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .content-card {
+        padding: 36px;
+        background: var(--color-white);
+        border: 1px solid var(--color-border);
+        border-radius: 16px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+      }
+
+      .section-label {
+        margin: 0 0 12px;
+        color: var(--color-accent);
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .section-title {
+        margin: 0;
+        color: var(--color-text);
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        line-height: 1.15;
+      }
+
+      .section-copy {
+        margin: 14px 0 0;
+        color: var(--color-body);
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      /* ── Setup steps ── */
+      .setup-list {
+        display: grid;
+        gap: 10px;
+        margin: 24px 0 0;
+        padding: 0;
+        list-style: none;
+        counter-reset: step;
+      }
+
+      .setup-step {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 16px 18px;
+        background: var(--color-bg);
+        border: 1px solid var(--color-border);
+        border-radius: 12px;
+        color: var(--color-text);
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.4;
+        counter-increment: step;
+      }
+
+      .setup-step::before {
+        content: counter(step);
+        display: inline-flex;
+        flex-shrink: 0;
+        width: 28px; height: 28px;
+        align-items: center; justify-content: center;
+        background: var(--color-text);
+        border-radius: 50%;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      code {
+        display: inline-block;
+        padding: 2px 7px;
+        background: var(--color-accent-soft);
+        border-radius: 6px;
+        color: var(--color-accent);
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+        font-size: 0.92em;
+      }
+
+      /* ── Prompts ── */
+      .prompts-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 24px;
+      }
+
+      .prompt-card {
+        padding: 20px;
+        background: var(--color-bg);
+        border: 1px solid var(--color-border);
+        border-radius: 12px;
+      }
+
+      .prompt-title {
+        margin: 0 0 8px;
+        color: var(--color-text);
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.3;
+      }
+
+      .prompt-text {
+        margin: 0;
+        color: var(--color-body);
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+        font-size: 13px;
+        line-height: 1.6;
+      }
+
+      /* ── What this replaces ── */
+      .replace-list {
+        display: grid;
+        gap: 10px;
+        margin: 24px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .replace-list li {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--color-text);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.4;
+      }
+
+      .replace-list li::before {
+        content: "";
+        flex-shrink: 0;
+        width: 8px; height: 8px;
+        background: var(--color-accent);
+        border-radius: 50%;
+      }
+
+      /* ── CTA card (dark) ── */
+      .cta-card {
+        padding: 48px;
+        background: var(--color-dark);
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+      }
+
+      .cta-card .section-label { color: rgba(255,255,255,0.4); }
+
+      .cta-card .section-title { color: #fff; }
+
+      .cta-card .section-copy {
+        max-width: 520px;
+        margin-top: 12px;
+        color: rgba(255,255,255,0.6);
+        font-size: 16px;
+        line-height: 1.65;
+      }
+
+      .cta-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 28px;
+        min-height: 48px;
+        padding: 14px 28px;
+        background: #fff;
+        border-radius: 999px;
+        color: #111113;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1;
+        transition: transform 0.2s ease, background 0.2s ease;
+      }
+
+      .cta-button:hover { background: #f0f0f4; transform: translateY(-1px); }
+
+      /* ── Footer ── */
+      .site-footer {
+        background: var(--color-bg);
+        padding: 34px 0 44px;
+        border-top: 1px solid rgba(29,29,31,0.08);
+      }
+
+      .footer-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        color: var(--color-muted);
+        font-size: 13px;
+      }
+
+      .footer-link { color: var(--color-text); font-weight: 500; }
+
+      /* ── Responsive ── */
+      @media (max-width: 900px) {
+        .guide-layout { grid-template-columns: 1fr; }
+        .guide-sidebar { position: static; }
+        .stats-row { flex-wrap: wrap; gap: 24px; }
+        .stat-item { flex: 1 1 auto; border-right: none; border-bottom: 1px solid var(--color-border); padding: 0 0 20px; }
+        .stat-item:last-child { border-bottom: none; padding-bottom: 0; }
+      }
+
+      @media (max-width: 768px) {
+        :root { --container-pad: 24px; }
+
+        .nav-inner { display: flex; min-height: 60px; justify-content: space-between; padding: 0 20px; }
+        .logo { width: 136px; height: 32px; }
+
+        .nav-links {
+          position: fixed;
+          top: 60px; right: 0; left: 0;
+          display: grid; gap: 0;
+          padding: 12px 24px 18px;
+          background: rgba(251,251,253,0.96);
+          border-bottom: 1px solid rgba(0,0,0,0.08);
+          box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+          opacity: 0; pointer-events: none;
+          transform: translateY(-10px);
+          transition: opacity 0.15s ease, transform 0.15s ease;
+          backdrop-filter: blur(20px) saturate(180%);
+          -webkit-backdrop-filter: blur(20px) saturate(180%);
+        }
+
+        .nav-links a { padding: 12px 0; }
+        body.nav-open .nav-links { opacity: 1; pointer-events: auto; transform: translateY(0); }
+        .nav-cta { display: none; }
+        .menu-toggle { display: flex; }
+
+        #guide-hero { padding: 108px 0 52px; }
+        .guide-title { font-size: 36px; }
+        .guide-subtitle { font-size: 16px; }
+
+        #guide-body { padding: 48px 0 72px; }
+        .content-card { padding: 24px; border-radius: 14px; }
+        .cta-card { padding: 32px 24px; }
+
+        .prompts-grid { grid-template-columns: 1fr; }
+
+        .footer-inner { flex-direction: column; align-items: flex-start; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-nav">
+      <nav class="nav-inner" aria-label="Primary navigation">
+        <a class="logo" href="/" aria-label="ARIZN home">
+          <img src="/images/logo-arizn-preto-header.png" alt="ARIZN">
+        </a>
+        <div class="nav-links" id="navLinks">
+          <a href="/">Home</a>
+          <a href="/#solutions">Solutions</a>
+          <a href="/guides" aria-current="page">Guides</a>
+          <a href="/#contact">Contact</a>
+        </div>
+        <a class="nav-cta" href="https://assessment.arizn.co/">Take the Assessment</a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section id="guide-hero" aria-labelledby="guide-title">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/guides">Guides</a>
+            <span aria-hidden="true">›</span>
+            <span>Meta Ads MCP</span>
+          </nav>
+          <p class="guide-tag">MCP <span class="tag-new">NEW</span></p>
+          <h1 class="guide-title" id="guide-title">Give Claude Full Control<br>of Your Meta Ads.</h1>
+          <p class="guide-subtitle">No agency. No code. No Ads Manager. Connect once, run everything with a conversation.</p>
+        </div>
+      </section>
+
+      <!-- Stats bar -->
+      <section id="guide-stats" aria-label="Guide highlights">
+        <div class="container">
+          <div class="stats-row">
+            <div class="stat-item">
+              <p class="stat-value">60s</p>
+              <p class="stat-label">Setup time</p>
+            </div>
+            <div class="stat-item">
+              <p class="stat-value">0</p>
+              <p class="stat-label">Lines of code</p>
+            </div>
+            <div class="stat-item">
+              <p class="stat-value">24/7</p>
+              <p class="stat-label">AI operating your ads</p>
+            </div>
+            <div class="stat-item">
+              <p class="stat-value">$0</p>
+              <p class="stat-label">Agency fees</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Body -->
+      <section id="guide-body">
+        <div class="container">
+          <div class="guide-layout">
+
+            <!-- Sidebar -->
+            <aside class="guide-sidebar" aria-label="Guide overview">
+              <div class="sidebar-card">
+                <p class="sidebar-eyebrow">Complete Setup Guide</p>
+                <h2 class="sidebar-title">Meta Ads MCP</h2>
+                <p class="sidebar-copy">Connect Claude to Meta Ads, authorize your account, and start asking for campaigns, reporting, and optimization.</p>
+                <code class="connector-url">mcp.facebook.com/ads</code>
+              </div>
+            </aside>
+
+            <!-- Content -->
+            <div class="guide-content">
+
+              <div class="content-card">
+                <p class="section-label">Overview</p>
+                <h2 class="section-title">What is Meta Ads MCP?</h2>
+                <p class="section-copy">Meta launched an MCP server that lets AI agents like Claude access and control your Meta Ads account directly. You can create campaigns, set budgets, analyze performance and optimize ads just by having a conversation with Claude.</p>
+              </div>
+
+              <div class="content-card">
+                <p class="section-label">Setup</p>
+                <h2 class="section-title">Less than 60 seconds.</h2>
+                <ol class="setup-list">
+                  <li class="setup-step">Open Claude at <code>claude.ai</code></li>
+                  <li class="setup-step">Click <strong>Customize</strong> in the top right corner</li>
+                  <li class="setup-step">Select <strong>Connectors</strong></li>
+                  <li class="setup-step">Click <strong>Add custom connector</strong></li>
+                  <li class="setup-step">Paste this URL: <code>mcp.facebook.com/ads</code></li>
+                  <li class="setup-step">Authorize your Meta account</li>
+                  <li class="setup-step">Done.</li>
+                </ol>
+              </div>
+
+              <div class="content-card">
+                <p class="section-label">Prompts</p>
+                <h2 class="section-title">What to say to Claude.</h2>
+                <div class="prompts-grid">
+                  <div class="prompt-card">
+                    <h3 class="prompt-title">Weekly digest</h3>
+                    <p class="prompt-text">"Show me this week's ad spend, results, and top 3 creatives in fatigue."</p>
+                  </div>
+                  <div class="prompt-card">
+                    <h3 class="prompt-title">Create a campaign</h3>
+                    <p class="prompt-text">"Create a campaign for HVAC tune-ups, $500 budget, targeting homeowners in Sacramento aged 30-65."</p>
+                  </div>
+                  <div class="prompt-card">
+                    <h3 class="prompt-title">Audience overlap</h3>
+                    <p class="prompt-text">"Which of my ad sets are competing against each other?"</p>
+                  </div>
+                  <div class="prompt-card">
+                    <h3 class="prompt-title">Budget pace</h3>
+                    <p class="prompt-text">"How much have I spent today and what's the projection until end of day?"</p>
+                  </div>
+                  <div class="prompt-card">
+                    <h3 class="prompt-title">Optimize</h3>
+                    <p class="prompt-text">"Which ads should I turn off and why?"</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="content-card">
+                <p class="section-label">Impact</p>
+                <h2 class="section-title">What this replaces.</h2>
+                <ul class="replace-list">
+                  <li>$2,500/month agency fees</li>
+                  <li>Hours inside Ads Manager</li>
+                  <li>Manual reporting and optimization</li>
+                </ul>
+              </div>
+
+              <div class="cta-card">
+                <p class="section-label">Next step</p>
+                <h2 class="section-title">Want this running for your business?</h2>
+                <p class="section-copy">ARIZN builds and manages AI systems for local businesses — fully done for you.</p>
+                <a class="cta-button" href="https://assessment.arizn.co/">Take the Free Assessment &rarr;</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>ARIZN. The Future of Local Business.</span>
+        <a class="footer-link" href="https://assessment.arizn.co/">Take the Free Assessment</a>
+      </div>
+    </footer>
+
+    <script>
+      const menuToggle = document.getElementById("menuToggle");
+      const navLinks   = document.getElementById("navLinks");
+
+      if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", () => {
+          const isOpen = document.body.classList.toggle("nav-open");
+          menuToggle.setAttribute("aria-expanded", String(isOpen));
+          menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+        });
+
+        navLinks.querySelectorAll("a").forEach(link => {
+          link.addEventListener("click", () => {
+            document.body.classList.remove("nav-open");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Open menu");
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

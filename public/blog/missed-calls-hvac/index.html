@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why HVAC Companies Lose $52,500/Year in Missed Calls — ARIZN Blog</title>
+  <meta name="description" content="The math behind HVAC missed call revenue loss — and the exact system to recover it. 15 missed calls × $175 average × 40% close rate = $52,500 gone every year.">
+  <link rel="canonical" href="https://arizn.co/blog/missed-calls-hvac">
+  <meta property="og:title" content="Why HVAC Companies Lose $52,500/Year in Missed Calls">
+  <meta property="og:description" content="The math behind HVAC missed call revenue loss — and the exact system to recover it.">
+  <meta property="og:url" content="https://arizn.co/blog/missed-calls-hvac">
+  <meta property="og:type" content="article">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Why HVAC Companies Lose $52,500/Year in Missed Calls — And How to Fix It","description":"The math behind HVAC missed call revenue loss and the exact system to recover it.","author":{"@type":"Organization","name":"ARIZN"},"publisher":{"@type":"Organization","name":"ARIZN","url":"https://arizn.co"},"url":"https://arizn.co/blog/missed-calls-hvac","datePublished":"2026-06-01","mainEntityOfPage":"https://arizn.co/blog/missed-calls-hvac"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #F5F5F7; --white: #FFFFFF; --dark: #0A0A0A; --text: #1d1d1f; --body: #6e6e73; --muted: #86868b; --accent: #1A56FF; --border: #E8E8E8; --btn-grad: linear-gradient(135deg, #5f6064 0%, #2f3034 42%, #111113 100%); --btn-grad-hover: linear-gradient(315deg, #5f6064 0%, #2f3034 42%, #111113 100%); --font-head: "Inter", -apple-system, "SF Pro Text", sans-serif; --font-body: "Inter", -apple-system, "SF Pro Text", sans-serif; --radius: 16px; --radius-pill: 980px; --max: 1140px; --pad: 48px; }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; background: var(--white); color: var(--body); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+    .site-nav { position: fixed; top: 0; left: 0; z-index: 100; width: 100%; background: rgba(245,245,247,0.86); backdrop-filter: blur(20px) saturate(180%); }
+    .nav-inner { display: grid; min-height: 64px; align-items: center; grid-template-columns: 1fr auto 1fr; gap: 24px; }
+    .logo { display: inline-flex; align-items: center; justify-self: start; width: 160px; height: 38px; overflow: hidden; }
+    .logo img { width: 100%; height: 100%; object-fit: contain; object-position: left center; }
+    .nav-links { display: flex; align-items: center; justify-content: center; gap: 32px; color: var(--text); font-size: 14px; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta { justify-self: end; padding: 8px 20px; background: var(--btn-grad); border-radius: var(--radius-pill); color: #fff; font-size: 14px; font-weight: 500; }
+    .nav-cta:hover { background: var(--btn-grad-hover); }
+    .menu-toggle { display: none; width: 40px; height: 40px; align-items: center; justify-content: center; flex-direction: column; gap: 5px; justify-self: end; background: transparent; border: 0; cursor: pointer; }
+    .menu-toggle span, .menu-toggle::before, .menu-toggle::after { content: ""; width: 18px; height: 1.5px; background: var(--text); transition: opacity .15s, transform .15s; }
+    body.nav-open .menu-toggle span { opacity: 0; }
+    body.nav-open .menu-toggle::before { transform: translateY(6.5px) rotate(45deg); }
+    body.nav-open .menu-toggle::after { transform: translateY(-6.5px) rotate(-45deg); }
+    .article-hero { padding: 144px 0 64px; background: var(--white); border-bottom: 1px solid var(--border); }
+    .article-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; }
+    .article-tag { padding: 4px 12px; background: rgba(26,86,255,.08); border-radius: var(--radius-pill); color: var(--accent); font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+    .article-date { color: var(--muted); font-size: 13px; }
+    .article-read { color: var(--muted); font-size: 13px; }
+    .article-title { margin: 0; color: var(--text); font-family: var(--font-head); font-size: 52px; font-weight: 800; letter-spacing: -.04em; line-height: 1.06; max-width: 800px; }
+    .article-excerpt { margin: 20px 0 0; color: var(--body); font-size: 20px; line-height: 1.6; max-width: 700px; }
+    .article-layout { max-width: 720px; margin: 0 auto; padding: 64px var(--pad); }
+    .article-layout h2 { font-family: var(--font-head); font-size: 30px; font-weight: 800; color: var(--text); letter-spacing: -.02em; line-height: 1.2; margin: 48px 0 16px; }
+    .article-layout h3 { font-size: 20px; font-weight: 700; color: var(--text); margin: 32px 0 12px; }
+    .article-layout p { font-size: 17px; line-height: 1.8; color: var(--body); margin: 0 0 20px; }
+    .article-layout ul, .article-layout ol { padding-left: 20px; margin: 0 0 20px; }
+    .article-layout li { font-size: 17px; line-height: 1.8; color: var(--body); margin-bottom: 8px; }
+    .stat-callout { margin: 32px 0; padding: 28px 32px; background: var(--bg); border-left: 4px solid var(--accent); border-radius: 0 12px 12px 0; }
+    .stat-callout-val { font-family: var(--font-head); font-size: 48px; font-weight: 800; color: var(--text); line-height: 1; }
+    .stat-callout-val.red { color: #EF4444; }
+    .stat-callout-desc { margin: 8px 0 0; font-size: 15px; color: var(--body); }
+    .calc-box { margin: 32px 0; padding: 28px 32px; background: #0C0C0C; border-radius: 16px; }
+    .calc-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+    .calc-row:last-child { border-bottom: 0; padding-top: 16px; }
+    .calc-label { color: rgba(255,255,255,.6); font-size: 15px; }
+    .calc-val { color: #fff; font-size: 15px; font-weight: 600; }
+    .calc-total .calc-label { color: #fff; font-size: 17px; font-weight: 700; }
+    .calc-total .calc-val { color: #EF4444; font-family: var(--font-head); font-size: 28px; font-weight: 800; }
+    .article-cta { margin: 48px 0 0; padding: 40px; background: #0C0C0C; border-radius: 20px; text-align: center; }
+    .article-cta-title { margin: 0; color: #fff; font-family: var(--font-head); font-size: 28px; font-weight: 800; letter-spacing: -.02em; line-height: 1.2; }
+    .article-cta-sub { margin: 10px 0 0; color: rgba(255,255,255,.5); font-size: 15px; }
+    .btn-primary { display: inline-flex; align-items: center; justify-content: center; padding: 14px 32px; background: var(--btn-grad); border: 0; border-radius: var(--radius-pill); color: #fff; font-size: 15px; font-weight: 600; transition: background .2s, transform .2s; margin-top: 24px; }
+    .btn-primary:hover { background: var(--btn-grad-hover); transform: translateY(-1px); }
+    .related { background: var(--bg); padding: 80px 0; border-top: 1px solid var(--border); }
+    .related-title { margin: 0 0 40px; font-family: var(--font-head); font-size: 28px; font-weight: 800; color: var(--text); letter-spacing: -.02em; }
+    .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .related-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; display: block; color: inherit; transition: transform .2s, box-shadow .2s; }
+    .related-card:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(0,0,0,.08); }
+    .related-tag { margin: 0 0 8px; color: var(--accent); font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+    .related-card-title { margin: 0; color: var(--text); font-size: 17px; font-weight: 700; line-height: 1.35; }
+    .site-footer { background: #0A0A0A; padding: 64px 0 40px; border-top: 1px solid rgba(255,255,255,.06); }
+    .footer-inner { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 64px; margin-bottom: 48px; }
+    .footer-logo { color: #fff; font-size: 22px; font-weight: 800; }
+    .footer-logo span { color: var(--accent); }
+    .footer-tagline { margin: 8px 0 0; color: rgba(255,255,255,.4); font-size: 14px; font-style: italic; }
+    .footer-desc { margin: 16px 0 0; color: rgba(255,255,255,.3); font-size: 13px; line-height: 1.7; max-width: 260px; }
+    .footer-col-title { margin: 0 0 20px; color: rgba(255,255,255,.3); font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+    .footer-link { display: block; margin-bottom: 10px; color: rgba(255,255,255,.5); font-size: 14px; transition: color .15s; }
+    .footer-link:hover { color: rgba(255,255,255,.9); }
+    .footer-divider { max-width: var(--max); margin: 0 auto 32px; padding: 0 var(--pad); border: 0; border-top: 1px solid rgba(255,255,255,.06); }
+    .footer-bottom { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); display: grid; grid-template-columns: 1fr 1fr; }
+    .footer-bottom p { margin: 0; color: rgba(255,255,255,.25); font-size: 13px; }
+    .footer-bottom p:last-child { text-align: right; }
+    @media (max-width: 768px) {
+      .article-title { font-size: 36px; } .article-layout { padding: 40px 20px; }
+      .related-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; gap: 36px; } .footer-bottom { grid-template-columns: 1fr; }
+      .footer-bottom p:last-child { text-align: left; }
+      .nav-inner { display: flex; justify-content: space-between; }
+      .nav-links { position: fixed; top: 64px; inset-inline: 0; display: grid; padding: 12px 24px 18px; background: rgba(251,251,253,.96); border-bottom: 1px solid rgba(0,0,0,.08); opacity: 0; pointer-events: none; transform: translateY(-10px); transition: opacity .15s, transform .15s; backdrop-filter: blur(20px); }
+      .nav-links a { padding: 12px 0; }
+      body.nav-open .nav-links { opacity: 1; pointer-events: auto; transform: none; }
+      .nav-cta { display: none; } .menu-toggle { display: flex; }
+      .wrap { padding: 0 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-nav">
+    <nav class="wrap nav-inner" aria-label="Primary navigation">
+      <a class="logo" href="/" aria-label="ARIZN home"><img src="/images/logo-arizn-preto-header.png" alt="ARIZN logo"></a>
+      <div class="nav-links" id="navLinks">
+        <a href="/#solution">Solutions</a><a href="/#process">How It Works</a><a href="/#products">Products</a><a href="/guides">Guides</a><a href="/#contact">Contact</a>
+      </div>
+      <a class="nav-cta" href="https://assessment.arizn.co/">Talk to ARIZN</a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span></button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="article-hero">
+      <div class="wrap">
+        <div class="article-meta">
+          <span class="article-tag">HVAC</span>
+          <span class="article-date">June 2026</span>
+          <span class="article-read">7 min read</span>
+        </div>
+        <h1 class="article-title">Why HVAC Companies Lose $52,500/Year in Missed Calls — And How to Fix It</h1>
+        <p class="article-excerpt">The math is simple, the problem is fixable, and most HVAC owners have no idea how much revenue is walking out the door every single week.</p>
+      </div>
+    </div>
+
+    <article class="article-layout">
+      <p>Let's do the math first. Then we'll talk about the fix.</p>
+
+      <div class="calc-box">
+        <div class="calc-row"><span class="calc-label">Missed calls per week (industry average)</span><span class="calc-val">15</span></div>
+        <div class="calc-row"><span class="calc-label">Average HVAC job value</span><span class="calc-val">$175</span></div>
+        <div class="calc-row"><span class="calc-label">Close rate on recovered leads</span><span class="calc-val">40%</span></div>
+        <div class="calc-row"><span class="calc-label">Revenue lost per week</span><span class="calc-val">$1,050</span></div>
+        <div class="calc-row calc-total"><span class="calc-label">Annual revenue lost</span><span class="calc-val">$52,500</span></div>
+      </div>
+
+      <p>That's $52,500 — not because the work wasn't there, not because customers didn't want to hire you, but because your phone rang while you were on a job and nobody picked up.</p>
+
+      <h2>Why HVAC Leads Are Different</h2>
+      <p>HVAC is an urgency business. When someone's AC breaks in July, they need it fixed today. They don't browse reviews for hours or wait to see who follows up. They call 2–3 companies and book whoever answers first.</p>
+      <p>This means every unanswered call isn't a "maybe we'll connect later." It's a customer who moved on in the next 4 minutes.</p>
+
+      <div class="stat-callout">
+        <p class="stat-callout-val red">85%</p>
+        <p class="stat-callout-desc">of people who call a business and don't reach anyone never call back. Source: Forbes Business Council, 2024.</p>
+      </div>
+
+      <h2>The Peak Season Problem Makes It Worse</h2>
+      <p>Here's the painful irony: the days when you miss the most calls are your busiest days. Mid-July heat wave. January freeze. You have 4 techs on jobs, a truck broken down, and your phone is ringing off the hook.</p>
+      <p>You're too busy to answer — which means you're also too busy to capture new revenue. The phone calls that could fund your slow season go unanswered exactly when they're flooding in.</p>
+
+      <h2>What the Fix Actually Looks Like</h2>
+      <p>The solution isn't hiring a full-time receptionist at $35,000/year. It's deploying an AI agent that responds to every missed call in under 8 seconds — automatically.</p>
+      <p>Here's the exact sequence:</p>
+      <ol>
+        <li><strong>Call missed:</strong> You're on a job. Phone rings. Goes to voicemail.</li>
+        <li><strong>8 seconds later:</strong> The caller gets a text: "Hey, this is [Business]. Sorry I missed you! I'm out on a job right now. What can I help you with?"</li>
+        <li><strong>AI qualifies the lead:</strong> What's the issue? What's the address? When do they need service?</li>
+        <li><strong>Appointment booked:</strong> AI books the appointment directly — no callback required.</li>
+        <li><strong>You get a notification:</strong> "New appointment booked: AC repair at [address], Thursday 2pm."</li>
+      </ol>
+
+      <h2>The Review Problem You're Also Ignoring</h2>
+      <p>There's a second revenue leak that's closely related. Your competitor on Google Maps has 240 reviews and a 4.8 star rating. You have 22 reviews and a 4.2.</p>
+      <p>When someone searches "HVAC repair near me" at 7am because their AC went out, they click the first result with the most reviews. If that's not you, you're not even getting the chance to miss the call.</p>
+      <p>The fix is equally simple: after every completed job, send the customer an automatic text requesting a Google review. 35–55% of customers who receive a timely, personalized request will leave one. At 10 jobs per week, that's 3–5 new reviews every week.</p>
+
+      <h2>What to Do This Week</h2>
+      <ul>
+        <li>Count how many calls went to voicemail last week</li>
+        <li>Multiply by $175 (average job) × 0.40 (close rate)</li>
+        <li>That's your weekly revenue leak</li>
+        <li>Set up a missed call text-back system (takes under 7 days with ARIZN)</li>
+        <li>Add a review request sequence after every completed job</li>
+      </ul>
+
+      <p>The math works the same whether you have 2 trucks or 20. The difference is whether you're capturing the revenue that's already trying to find you.</p>
+
+      <div class="article-cta">
+        <h2 class="article-cta-title">See Your Exact Revenue Leak.</h2>
+        <p class="article-cta-sub">Take the free 3-minute assessment. Get your infrastructure score and a plan to fix it.</p>
+        <a class="btn-primary" href="https://assessment.arizn.co/">Take the Free Assessment →</a>
+      </div>
+    </article>
+
+    <section class="related">
+      <div class="wrap">
+        <h2 class="related-title">More for HVAC Companies</h2>
+        <div class="related-grid">
+          <a class="related-card" href="/hvac"><p class="related-tag">HVAC</p><h3 class="related-card-title">ARIZN for HVAC Companies — Full Infrastructure Overview</h3></a>
+          <a class="related-card" href="/receptionist"><p class="related-tag">PRODUCT</p><h3 class="related-card-title">ARIZN Receptionist — Never Miss a Call Again</h3></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div><div class="footer-logo">ARIZN<span>•</span></div><p class="footer-tagline">The Future of Local Business.</p><p class="footer-desc">Business infrastructure for local businesses. Built like a big company.</p></div>
+      <nav aria-label="Footer solutions"><p class="footer-col-title">SOLUTIONS</p><a class="footer-link" href="/receptionist">ARIZN Receptionist</a><a class="footer-link" href="/review-agent">Review Request Agent</a><a class="footer-link" href="/no-show-prevention">No-Show Prevention</a><a class="footer-link" href="/quote-recovery">Quote Recovery</a><a class="footer-link" href="/website-gbp">Website + GBP</a></nav>
+      <nav aria-label="Footer company"><p class="footer-col-title">COMPANY</p><a class="footer-link" href="/#process">How It Works</a><a class="footer-link" href="/#verticals">Who It's For</a><a class="footer-link" href="/guides">Guides</a><a class="footer-link" href="/blog">Blog</a><a class="footer-link" href="https://assessment.arizn.co/">Take the Assessment</a></nav>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom"><p>© 2026 ARIZN. All rights reserved.</p><p>Built like a big company.</p></div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    menuToggle.addEventListener("click", () => { const open = document.body.classList.toggle("nav-open"); menuToggle.setAttribute("aria-expanded", String(open)); });
+  </script>
+</body>
+</html>

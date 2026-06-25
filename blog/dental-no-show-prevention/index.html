@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Dental Patients No-Show (And How to Stop It With One Text) | ARIZN Blog</title>
+  <meta name="description" content="No-shows cost dental practices $150–300 per appointment. A simple 3-text reminder sequence reduces them by 40–60% — and runs completely automatically.">
+  <link rel="canonical" href="https://arizn.co/blog/dental-no-show-prevention">
+  <meta property="og:title" content="Why Dental Patients No-Show (And How to Stop It With One Text)">
+  <meta property="og:description" content="No-shows cost dental practices $150–300 per appointment. The fix is simpler than you think — and it runs automatically.">
+  <meta property="og:url" content="https://arizn.co/blog/dental-no-show-prevention">
+  <meta property="og:type" content="article">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Why Dental Patients No-Show (And How to Stop It With One Text)","description":"How dental practices can reduce no-shows by 40–60% with an automated 3-text reminder sequence.","author":{"@type":"Organization","name":"ARIZN"},"publisher":{"@type":"Organization","name":"ARIZN","url":"https://arizn.co"},"url":"https://arizn.co/blog/dental-no-show-prevention","datePublished":"2026-06-01"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F5F5F7; --white: #FFFFFF; --dark: #0A0A0A;
+      --text: #1d1d1f; --body: #6e6e73; --muted: #86868b;
+      --accent: #1A56FF; --accent-green: #0D9E75; --border: #E8E8E8;
+      --btn-grad: linear-gradient(135deg, #5f6064 0%, #2f3034 42%, #111113 100%);
+      --btn-grad-hover: linear-gradient(315deg, #5f6064 0%, #2f3034 42%, #111113 100%);
+      --font: "Inter", -apple-system, "SF Pro Text", sans-serif;
+      --radius: 16px; --radius-pill: 980px; --max: 1140px; --pad: 48px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; background: var(--white); color: var(--body); font-family: var(--font); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+    .site-nav { position: fixed; top: 0; left: 0; z-index: 100; width: 100%; background: rgba(245,245,247,0.86); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); }
+    .nav-inner { display: grid; min-height: 64px; align-items: center; grid-template-columns: 1fr auto 1fr; gap: 24px; }
+    .logo { display: inline-flex; align-items: center; justify-self: start; width: 160px; height: 38px; overflow: hidden; }
+    .logo img { width: 100%; height: 100%; object-fit: contain; object-position: left center; }
+    .nav-links { display: flex; align-items: center; justify-content: center; gap: 32px; color: var(--text); font-size: 14px; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta { justify-self: end; padding: 8px 20px; background: var(--btn-grad); border-radius: var(--radius-pill); color: #fff; font-size: 14px; font-weight: 500; }
+    .nav-cta:hover { background: var(--btn-grad-hover); }
+    .menu-toggle { display: none; width: 40px; height: 40px; align-items: center; justify-content: center; flex-direction: column; gap: 5px; justify-self: end; background: transparent; border: 0; cursor: pointer; }
+    .menu-toggle span, .menu-toggle::before, .menu-toggle::after { content: ""; width: 18px; height: 1.5px; background: var(--text); transition: opacity .15s, transform .15s; }
+    body.nav-open .menu-toggle span { opacity: 0; }
+    body.nav-open .menu-toggle::before { transform: translateY(6.5px) rotate(45deg); }
+    body.nav-open .menu-toggle::after { transform: translateY(-6.5px) rotate(-45deg); }
+    .article-hero { padding: 136px 0 56px; border-bottom: 1px solid var(--border); }
+    .article-breadcrumb { margin: 0 0 20px; color: var(--muted); font-size: 13px; }
+    .article-breadcrumb a { color: var(--accent); }
+    .article-breadcrumb span { margin: 0 6px; }
+    .article-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+    .article-cat { padding: 4px 12px; background: rgba(13,158,117,.1); border-radius: var(--radius-pill); color: var(--accent-green); font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+    .article-date { color: var(--muted); font-size: 13px; }
+    .article-read { color: var(--muted); font-size: 13px; }
+    .article-title { margin: 0; color: var(--text); font-size: 48px; font-weight: 900; letter-spacing: -.04em; line-height: 1.06; max-width: 820px; }
+    .article-excerpt { margin: 18px 0 0; color: var(--body); font-size: 19px; line-height: 1.6; max-width: 680px; }
+    .article-layout { max-width: 720px; margin: 0 auto; padding: 64px var(--pad) 80px; }
+    .article-layout h2 { font-size: 28px; font-weight: 800; color: var(--text); letter-spacing: -.02em; line-height: 1.2; margin: 52px 0 16px; }
+    .article-layout h3 { font-size: 19px; font-weight: 700; color: var(--text); margin: 36px 0 10px; }
+    .article-layout p { font-size: 17px; line-height: 1.8; color: var(--body); margin: 0 0 20px; }
+    .article-layout ul, .article-layout ol { padding-left: 24px; margin: 0 0 20px; }
+    .article-layout li { font-size: 17px; line-height: 1.8; color: var(--body); margin-bottom: 8px; }
+    .article-layout strong { color: var(--text); font-weight: 600; }
+    .cost-box { margin: 36px 0; padding: 28px 32px; background: var(--dark); border-radius: var(--radius); display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .cost-item-val { font-size: 40px; font-weight: 900; color: #fff; line-height: 1; letter-spacing: -.03em; }
+    .cost-item-val.green { color: var(--accent-green); }
+    .cost-item-desc { margin: 6px 0 0; font-size: 13px; color: rgba(255,255,255,.4); line-height: 1.5; }
+    .stat-callout { margin: 36px 0; padding: 28px 32px; background: var(--bg); border-left: 4px solid var(--accent-green); border-radius: 0 var(--radius) var(--radius) 0; }
+    .stat-callout-val { font-size: 52px; font-weight: 900; color: var(--accent-green); line-height: 1; letter-spacing: -.04em; }
+    .stat-callout-desc { margin: 8px 0 0; font-size: 15px; color: var(--body); }
+    .sequence { margin: 28px 0; display: grid; gap: 12px; }
+    .seq-item { display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: start; padding: 20px 24px; background: var(--bg); border-radius: 12px; border: 1px solid var(--border); }
+    .seq-timing { padding-top: 2px; white-space: nowrap; }
+    .seq-timing-label { color: var(--accent-green); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 2px; }
+    .seq-timing-val { color: var(--text); font-size: 14px; font-weight: 700; }
+    .seq-body {}
+    .seq-title { margin: 0 0 4px; color: var(--text); font-size: 15px; font-weight: 700; }
+    .seq-msg { margin: 8px 0 0; padding: 12px 16px; background: var(--white); border: 1px solid var(--border); border-radius: 10px 10px 10px 3px; color: var(--text); font-size: 13px; line-height: 1.6; font-style: italic; }
+    .article-cta { margin: 48px 0 0; padding: 40px; background: var(--dark); border-radius: 20px; text-align: center; }
+    .article-cta-title { margin: 0; color: #fff; font-size: 26px; font-weight: 800; letter-spacing: -.02em; line-height: 1.2; }
+    .article-cta-sub { margin: 10px 0 0; color: rgba(255,255,255,.5); font-size: 15px; line-height: 1.6; }
+    .btn-primary { display: inline-flex; align-items: center; padding: 14px 32px; background: var(--btn-grad); border: 0; border-radius: var(--radius-pill); color: #fff; font-size: 15px; font-weight: 600; margin-top: 24px; transition: background .2s, transform .2s; }
+    .btn-primary:hover { background: var(--btn-grad-hover); transform: translateY(-1px); }
+    .related { background: var(--bg); padding: 72px 0; border-top: 1px solid var(--border); }
+    .related-title { margin: 0 0 32px; color: var(--text); font-size: 24px; font-weight: 800; letter-spacing: -.02em; }
+    .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .related-card { padding: 24px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); transition: box-shadow .2s; }
+    .related-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,.08); }
+    .related-cat { display: inline-block; margin-bottom: 8px; padding: 3px 10px; background: rgba(13,158,117,.1); border-radius: var(--radius-pill); color: var(--accent-green); font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+    .related-card-title { margin: 0 0 8px; color: var(--text); font-size: 16px; font-weight: 700; line-height: 1.35; }
+    .related-link { color: var(--accent); font-size: 13px; font-weight: 600; }
+    .site-footer { background: #0A0A0A; padding: 64px 0 40px; border-top: 1px solid rgba(255,255,255,.06); }
+    .footer-inner { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 64px; margin-bottom: 48px; }
+    .footer-logo { color: #fff; font-size: 22px; font-weight: 800; }
+    .footer-logo span { color: var(--accent); }
+    .footer-tagline { margin: 8px 0 0; color: rgba(255,255,255,.4); font-size: 14px; font-style: italic; }
+    .footer-desc { margin: 16px 0 0; color: rgba(255,255,255,.3); font-size: 13px; line-height: 1.7; max-width: 260px; }
+    .footer-col-title { margin: 0 0 20px; color: rgba(255,255,255,.3); font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+    .footer-link { display: block; margin-bottom: 10px; color: rgba(255,255,255,.5); font-size: 14px; transition: color .15s; }
+    .footer-link:hover { color: rgba(255,255,255,.9); }
+    .footer-divider { max-width: var(--max); margin: 0 auto 32px; padding: 0 var(--pad); border: 0; border-top: 1px solid rgba(255,255,255,.06); }
+    .footer-bottom { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); display: flex; justify-content: space-between; }
+    .footer-bottom p { margin: 0; color: rgba(255,255,255,.25); font-size: 13px; }
+    @media (max-width: 768px) {
+      .article-title { font-size: 32px; }
+      .article-layout { padding: 40px 20px 60px; }
+      .cost-box { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .nav-inner { display: flex; justify-content: space-between; }
+      .nav-links { position: fixed; top: 64px; inset-inline: 0; display: grid; padding: 12px 24px 18px; background: rgba(251,251,253,.96); border-bottom: 1px solid rgba(0,0,0,.08); opacity: 0; pointer-events: none; transform: translateY(-10px); transition: opacity .15s, transform .15s; backdrop-filter: blur(20px); }
+      .nav-links a { padding: 12px 0; }
+      body.nav-open .nav-links { opacity: 1; pointer-events: auto; transform: none; }
+      .nav-cta { display: none; } .menu-toggle { display: flex; }
+      .wrap { padding: 0 20px; }
+      .footer-inner { grid-template-columns: 1fr; gap: 36px; }
+      .footer-bottom { flex-direction: column; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-nav">
+    <nav class="wrap nav-inner" aria-label="Primary navigation">
+      <a class="logo" href="/" aria-label="ARIZN home"><img src="/images/logo-arizn-preto-header.png" alt="ARIZN"></a>
+      <div class="nav-links" id="navLinks">
+        <a href="/#solution">Solutions</a>
+        <a href="/#process">How It Works</a>
+        <a href="/#products">Products</a>
+        <a href="/guides">Guides</a>
+        <a href="/blog">Blog</a>
+        <a href="/#contact">Contact</a>
+      </div>
+      <a class="nav-cta" href="https://assessment.arizn.co/">Talk to ARIZN</a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="article-hero">
+      <div class="wrap">
+        <p class="article-breadcrumb"><a href="/blog">Blog</a><span>›</span>Dental</p>
+        <div class="article-meta">
+          <span class="article-cat">Dental</span>
+          <span class="article-date">June 2026</span>
+          <span class="article-read">4 min read</span>
+        </div>
+        <h1 class="article-title">Why Dental Patients No-Show (And How to Stop It With One Text)</h1>
+        <p class="article-excerpt">No-shows cost dental practices $150–300 per appointment. The fix is simpler than you think — and it runs automatically.</p>
+      </div>
+    </section>
+
+    <div class="article-layout">
+
+      <p>Tuesday, 10am. The hygienist is set up. The room is ready. The patient booked three weeks ago. And then — nothing. No call, no text. They just don't show up.</p>
+      <p>You've already lost the slot. You can't fill it on 20 minutes notice. And you'll spend the next 10 minutes tracking down whether to wait or move on.</p>
+      <p>This happens in dental practices every single day. And while each individual no-show feels like a small frustration, the cumulative cost is significant.</p>
+
+      <h2>What a No-Show Actually Costs</h2>
+      <p>Most dentists think of a no-show as a lost appointment. It's actually worse than that.</p>
+
+      <div class="cost-box">
+        <div>
+          <div class="cost-item-val">$150</div>
+          <p class="cost-item-desc">Minimum lost per no-show — cleaning, exam, basic treatment</p>
+        </div>
+        <div>
+          <div class="cost-item-val green">$300+</div>
+          <p class="cost-item-desc">Average when restorative procedures are involved</p>
+        </div>
+      </div>
+
+      <p>A practice with 5 no-shows per week at an average of $200 each loses <strong>$52,000 per year</strong>. And that's before accounting for the operational cost — supplies prepped, staff paid, room reserved — all for an appointment that never happened.</p>
+      <p>More concerning: patients who no-show once are more likely to do it again. The habit forms when there are no consequences and no reminders strong enough to change behavior.</p>
+
+      <h2>Why Patients Actually Don't Show Up</h2>
+      <p>Most dental no-shows aren't malicious. They're not even irresponsible. They're just forgetful. Three weeks is a long time. Life happens. The appointment that felt urgent when it was booked feels optional the morning it arrives — especially if there's no pain, no urgency, and no reminder that it matters.</p>
+      <p>Research consistently shows that the top reason patients miss appointments is that they simply <strong>forgot they had one.</strong></p>
+
+      <div class="stat-callout">
+        <div class="stat-callout-val">60%</div>
+        <p class="stat-callout-desc">of no-shows say they simply forgot the appointment. It wasn't intentional — there just wasn't a strong enough reminder.</p>
+      </div>
+
+      <p>A phone call reminder from your front desk is better than nothing. But it's also labor-intensive, often goes to voicemail, and happens at a single point in time — usually the day before. By then, the patient may already have made conflicting plans.</p>
+
+      <h2>The 3-Text Sequence That Changes Everything</h2>
+      <p>The most effective no-show prevention uses multiple touchpoints sent automatically — starting from the moment the appointment is booked. Here's how it works:</p>
+
+      <div class="sequence">
+        <div class="seq-item">
+          <div class="seq-timing">
+            <p class="seq-timing-label">Immediately</p>
+            <p class="seq-timing-val">Booking confirmation</p>
+          </div>
+          <div class="seq-body">
+            <p class="seq-title">Confirmation + calendar link</p>
+            <div class="seq-msg">"Hi Sarah! Your cleaning with Dr. Martinez is confirmed for Tuesday, July 8 at 10:00 AM. Reply CONFIRM to lock it in, or RESCHEDULE if you need to change. Add to calendar: [link] 🗓"</div>
+          </div>
+        </div>
+        <div class="seq-item">
+          <div class="seq-timing">
+            <p class="seq-timing-label">24 hours before</p>
+            <p class="seq-timing-val">Reminder + confirm</p>
+          </div>
+          <div class="seq-body">
+            <p class="seq-title">The memory jogger</p>
+            <div class="seq-msg">"Hi Sarah — quick reminder that your appointment with Dr. Martinez is tomorrow at 10:00 AM. See you then! Reply RESCHEDULE if you need to move it. 😊"</div>
+          </div>
+        </div>
+        <div class="seq-item">
+          <div class="seq-timing">
+            <p class="seq-timing-label">2 hours before</p>
+            <p class="seq-timing-val">Final reminder</p>
+          </div>
+          <div class="seq-body">
+            <p class="seq-title">The last-minute prompt</p>
+            <div class="seq-msg">"Good morning Sarah! Just a reminder — you're scheduled with us at 10:00 AM today. We're looking forward to seeing you. Reply HELP if you need anything. 🦷"</div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Why Three Touchpoints Work Better Than One</h2>
+      <p>Each message serves a different purpose. The confirmation creates commitment — when someone replies "CONFIRM," they've made a micro-decision to attend. The 24-hour reminder triggers planning — the patient starts thinking about parking, timing, what to eat first. The 2-hour message creates urgency — it's too late to forget.</p>
+      <p>Practices using this sequence see <strong>40–60% reductions in no-shows</strong>. Not because patients suddenly become more responsible, but because the system does the reminding that the front desk can't always do consistently.</p>
+
+      <h2>The Bonus: Catching Cancellations Early</h2>
+      <p>When a patient replies RESCHEDULE to any message, your team gets a notification with enough time to fill the slot. An early cancellation — even the day before — is significantly easier to fill than a no-show discovered 15 minutes after the appointment was supposed to start.</p>
+      <p>This is the part most practices miss: no-show prevention isn't just about preventing no-shows. It's about converting would-be no-shows into early cancellations that can be rebooked.</p>
+
+      <h2>What This Looks Like in Practice</h2>
+      <p>The system runs entirely in the background. When your front desk books an appointment, the sequence triggers automatically. No one has to remember to send reminders. No one spends time on confirmation calls. The sequence goes out, confirmations come back, and your schedule fills up with patients who actually intend to show.</p>
+      <p>Practices using ARIZN's No-Show Prevention typically save 6–8 hours per week in staff time while reducing no-shows by nearly half. That's two problems solved with one system.</p>
+
+      <div class="article-cta">
+        <h3 class="article-cta-title">Stop Losing $200 Every Time a Chair Sits Empty</h3>
+        <p class="article-cta-sub">ARIZN sets up automatic appointment reminders for dental practices — confirmation, 24h, and 2h — so your schedule stays full without any extra work for your team.</p>
+        <a class="btn-primary" href="https://assessment.arizn.co/">Get a Free Audit →</a>
+      </div>
+
+    </div>
+
+    <section class="related">
+      <div class="wrap">
+        <h2 class="related-title">More Articles</h2>
+        <div class="related-grid">
+          <a class="related-card" href="/blog/hvac-google-reviews">
+            <span class="related-cat">HVAC</span>
+            <p class="related-card-title">How HVAC Companies Get More Google Reviews Without Asking Awkwardly</p>
+            <span class="related-link">Read article →</span>
+          </a>
+          <a class="related-card" href="/dentist">
+            <span class="related-cat">Dental</span>
+            <p class="related-card-title">See the full Dental infrastructure ARIZN builds for your practice</p>
+            <span class="related-link">See Dental solutions →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">ARIZN<span>•</span></div>
+        <p class="footer-tagline">The Future of Local Business.</p>
+        <p class="footer-desc">Business infrastructure for local businesses. Built like a big company.</p>
+      </div>
+      <nav aria-label="Footer solutions">
+        <p class="footer-col-title">SOLUTIONS</p>
+        <a class="footer-link" href="/receptionist">ARIZN Receptionist</a>
+        <a class="footer-link" href="/review-agent">Review Request Agent</a>
+        <a class="footer-link" href="/no-show-prevention">No-Show Prevention</a>
+        <a class="footer-link" href="/quote-recovery">Quote Recovery</a>
+        <a class="footer-link" href="/website-gbp">Website + GBP</a>
+      </nav>
+      <nav aria-label="Footer company">
+        <p class="footer-col-title">COMPANY</p>
+        <a class="footer-link" href="/#process">How It Works</a>
+        <a class="footer-link" href="/#verticals">Who It's For</a>
+        <a class="footer-link" href="/guides">Guides</a>
+        <a class="footer-link" href="/blog">Blog</a>
+        <a class="footer-link" href="https://assessment.arizn.co/">Take the Assessment</a>
+      </nav>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <p>© 2026 ARIZN. All rights reserved.</p>
+      <p>Built like a big company.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    menuToggle.addEventListener("click", () => {
+      const open = document.body.classList.toggle("nav-open");
+      menuToggle.setAttribute("aria-expanded", String(open));
+    });
+  </script>
+</body>
+</html>

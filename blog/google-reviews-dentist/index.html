@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Dental Practices Get 4× More Google Reviews Without Asking Staff — ARIZN Blog</title>
+  <meta name="description" content="73% of patients trust a dental practice more when it has over 10 reviews. Most practices have 18. Here's how to fix that — automatically and consistently.">
+  <link rel="canonical" href="https://arizn.co/blog/google-reviews-dentist">
+  <meta property="og:title" content="How Dental Practices Get 4× More Google Reviews Without Asking Staff">
+  <meta property="og:description" content="73% of patients trust a dental practice with 10+ reviews. Most have 18. Here's the system to fix it automatically.">
+  <meta property="og:url" content="https://arizn.co/blog/google-reviews-dentist">
+  <meta property="og:type" content="article">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"How Dental Practices Can Get 4× More Google Reviews Without Asking Staff to Remember","description":"How dental practices can automate their Google review generation to build trust and attract more patients.","author":{"@type":"Organization","name":"ARIZN"},"publisher":{"@type":"Organization","name":"ARIZN","url":"https://arizn.co"},"url":"https://arizn.co/blog/google-reviews-dentist","datePublished":"2026-06-01"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #F5F5F7; --white: #FFFFFF; --dark: #0A0A0A; --text: #1d1d1f; --body: #6e6e73; --muted: #86868b; --accent: #1A56FF; --accent-green: #0D9E75; --border: #E8E8E8; --btn-grad: linear-gradient(135deg, #5f6064 0%, #2f3034 42%, #111113 100%); --btn-grad-hover: linear-gradient(315deg, #5f6064 0%, #2f3034 42%, #111113 100%); --font-head: "Inter", -apple-system, "SF Pro Text", sans-serif; --font-body: "Inter", -apple-system, "SF Pro Text", sans-serif; --radius: 16px; --radius-pill: 980px; --max: 1140px; --pad: 48px; }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; background: var(--white); color: var(--body); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+    .site-nav { position: fixed; top: 0; left: 0; z-index: 100; width: 100%; background: rgba(245,245,247,0.86); backdrop-filter: blur(20px) saturate(180%); }
+    .nav-inner { display: grid; min-height: 64px; align-items: center; grid-template-columns: 1fr auto 1fr; gap: 24px; }
+    .logo { display: inline-flex; align-items: center; justify-self: start; width: 160px; height: 38px; overflow: hidden; }
+    .logo img { width: 100%; height: 100%; object-fit: contain; object-position: left center; }
+    .nav-links { display: flex; align-items: center; justify-content: center; gap: 32px; color: var(--text); font-size: 14px; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta { justify-self: end; padding: 8px 20px; background: var(--btn-grad); border-radius: var(--radius-pill); color: #fff; font-size: 14px; font-weight: 500; }
+    .nav-cta:hover { background: var(--btn-grad-hover); }
+    .menu-toggle { display: none; width: 40px; height: 40px; align-items: center; justify-content: center; flex-direction: column; gap: 5px; justify-self: end; background: transparent; border: 0; cursor: pointer; }
+    .menu-toggle span, .menu-toggle::before, .menu-toggle::after { content: ""; width: 18px; height: 1.5px; background: var(--text); transition: opacity .15s, transform .15s; }
+    body.nav-open .menu-toggle span { opacity: 0; }
+    body.nav-open .menu-toggle::before { transform: translateY(6.5px) rotate(45deg); }
+    body.nav-open .menu-toggle::after { transform: translateY(-6.5px) rotate(-45deg); }
+    .article-hero { padding: 144px 0 64px; border-bottom: 1px solid var(--border); }
+    .article-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; }
+    .article-tag { padding: 4px 12px; background: rgba(13,158,117,.1); border-radius: var(--radius-pill); color: var(--accent-green); font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+    .article-date { color: var(--muted); font-size: 13px; }
+    .article-read { color: var(--muted); font-size: 13px; }
+    .article-title { margin: 0; color: var(--text); font-family: var(--font-head); font-size: 52px; font-weight: 800; letter-spacing: -.04em; line-height: 1.06; max-width: 800px; }
+    .article-excerpt { margin: 20px 0 0; color: var(--body); font-size: 20px; line-height: 1.6; max-width: 700px; }
+    .article-layout { max-width: 720px; margin: 0 auto; padding: 64px var(--pad); }
+    .article-layout h2 { font-family: var(--font-head); font-size: 30px; font-weight: 800; color: var(--text); letter-spacing: -.02em; line-height: 1.2; margin: 48px 0 16px; }
+    .article-layout h3 { font-size: 20px; font-weight: 700; color: var(--text); margin: 32px 0 12px; }
+    .article-layout p { font-size: 17px; line-height: 1.8; color: var(--body); margin: 0 0 20px; }
+    .article-layout ul, .article-layout ol { padding-left: 20px; margin: 0 0 20px; }
+    .article-layout li { font-size: 17px; line-height: 1.8; color: var(--body); margin-bottom: 8px; }
+    .stat-callout { margin: 32px 0; padding: 28px 32px; background: var(--bg); border-left: 4px solid var(--accent-green); border-radius: 0 12px 12px 0; }
+    .stat-callout-val { font-family: var(--font-head); font-size: 48px; font-weight: 800; color: var(--text); line-height: 1; }
+    .stat-callout-val.green { color: var(--accent-green); }
+    .stat-callout-desc { margin: 8px 0 0; font-size: 15px; color: var(--body); }
+    .compare-box { margin: 32px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .compare-item { padding: 24px; border-radius: 14px; border: 1px solid var(--border); }
+    .compare-item.bad { background: rgba(239,68,68,.04); border-color: rgba(239,68,68,.2); }
+    .compare-item.good { background: rgba(13,158,117,.04); border-color: rgba(13,158,117,.2); }
+    .compare-label { margin: 0 0 8px; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+    .compare-item.bad .compare-label { color: #EF4444; }
+    .compare-item.good .compare-label { color: var(--accent-green); }
+    .compare-val { margin: 0 0 8px; font-family: var(--font-head); font-size: 36px; font-weight: 800; color: var(--text); line-height: 1; }
+    .compare-desc { margin: 0; color: var(--body); font-size: 14px; line-height: 1.6; }
+    .msg-preview { margin: 24px 0; padding: 20px 24px; background: var(--bg); border-radius: 16px; border: 1px solid var(--border); }
+    .msg-label { margin: 0 0 10px; color: var(--muted); font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+    .msg-bubble { background: var(--white); border: 1px solid var(--border); border-radius: 14px 14px 14px 4px; padding: 14px 18px; color: var(--text); font-size: 15px; line-height: 1.6; font-style: italic; }
+    .article-cta { margin: 48px 0 0; padding: 40px; background: #0C0C0C; border-radius: 20px; text-align: center; }
+    .article-cta-title { margin: 0; color: #fff; font-family: var(--font-head); font-size: 28px; font-weight: 800; letter-spacing: -.02em; line-height: 1.2; }
+    .article-cta-sub { margin: 10px 0 0; color: rgba(255,255,255,.5); font-size: 15px; }
+    .btn-primary { display: inline-flex; align-items: center; justify-content: center; padding: 14px 32px; background: var(--btn-grad); border: 0; border-radius: var(--radius-pill); color: #fff; font-size: 15px; font-weight: 600; transition: background .2s, transform .2s; margin-top: 24px; }
+    .btn-primary:hover { background: var(--btn-grad-hover); transform: translateY(-1px); }
+    .related { background: var(--bg); padding: 80px 0; border-top: 1px solid var(--border); }
+    .related-title { margin: 0 0 40px; font-family: var(--font-head); font-size: 28px; font-weight: 800; color: var(--text); letter-spacing: -.02em; }
+    .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .related-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; display: block; color: inherit; transition: transform .2s, box-shadow .2s; }
+    .related-card:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(0,0,0,.08); }
+    .related-tag { margin: 0 0 8px; color: var(--accent); font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+    .related-card-title { margin: 0; color: var(--text); font-size: 17px; font-weight: 700; line-height: 1.35; }
+    .site-footer { background: #0A0A0A; padding: 64px 0 40px; border-top: 1px solid rgba(255,255,255,.06); }
+    .footer-inner { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 64px; margin-bottom: 48px; }
+    .footer-logo { color: #fff; font-size: 22px; font-weight: 800; }
+    .footer-logo span { color: var(--accent); }
+    .footer-tagline { margin: 8px 0 0; color: rgba(255,255,255,.4); font-size: 14px; font-style: italic; }
+    .footer-desc { margin: 16px 0 0; color: rgba(255,255,255,.3); font-size: 13px; line-height: 1.7; max-width: 260px; }
+    .footer-col-title { margin: 0 0 20px; color: rgba(255,255,255,.3); font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+    .footer-link { display: block; margin-bottom: 10px; color: rgba(255,255,255,.5); font-size: 14px; transition: color .15s; }
+    .footer-link:hover { color: rgba(255,255,255,.9); }
+    .footer-divider { max-width: var(--max); margin: 0 auto 32px; padding: 0 var(--pad); border: 0; border-top: 1px solid rgba(255,255,255,.06); }
+    .footer-bottom { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); display: grid; grid-template-columns: 1fr 1fr; }
+    .footer-bottom p { margin: 0; color: rgba(255,255,255,.25); font-size: 13px; }
+    .footer-bottom p:last-child { text-align: right; }
+    @media (max-width: 768px) {
+      .article-title { font-size: 36px; } .article-layout { padding: 40px 20px; }
+      .related-grid, .compare-box { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; gap: 36px; } .footer-bottom { grid-template-columns: 1fr; }
+      .footer-bottom p:last-child { text-align: left; }
+      .nav-inner { display: flex; justify-content: space-between; }
+      .nav-links { position: fixed; top: 64px; inset-inline: 0; display: grid; padding: 12px 24px 18px; background: rgba(251,251,253,.96); border-bottom: 1px solid rgba(0,0,0,.08); opacity: 0; pointer-events: none; transform: translateY(-10px); transition: opacity .15s, transform .15s; backdrop-filter: blur(20px); }
+      .nav-links a { padding: 12px 0; }
+      body.nav-open .nav-links { opacity: 1; pointer-events: auto; transform: none; }
+      .nav-cta { display: none; } .menu-toggle { display: flex; }
+      .wrap { padding: 0 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-nav">
+    <nav class="wrap nav-inner" aria-label="Primary navigation">
+      <a class="logo" href="/" aria-label="ARIZN home"><img src="/images/logo-arizn-preto-header.png" alt="ARIZN logo"></a>
+      <div class="nav-links" id="navLinks">
+        <a href="/#solution">Solutions</a><a href="/#process">How It Works</a><a href="/#products">Products</a><a href="/guides">Guides</a><a href="/#contact">Contact</a>
+      </div>
+      <a class="nav-cta" href="https://assessment.arizn.co/">Talk to ARIZN</a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span></button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="article-hero">
+      <div class="wrap">
+        <div class="article-meta">
+          <span class="article-tag">DENTAL</span>
+          <span class="article-date">June 2026</span>
+          <span class="article-read">5 min read</span>
+        </div>
+        <h1 class="article-title">How Dental Practices Can Get 4× More Google Reviews Without Asking Staff to Remember</h1>
+        <p class="article-excerpt">73% of patients trust a dental practice more when it has over 10 reviews. Most practices have 18. Here's how to fix that — automatically and consistently.</p>
+      </div>
+    </div>
+
+    <article class="article-layout">
+      <p>There are 179,000 dental practices in the United States. The difference between a full schedule and empty chairs often comes down to one thing: how many Google reviews you have and what they say.</p>
+      <p>New patients search "dentist near me." They read the first three results. They pick the one with the most reviews and the highest rating — usually in under 90 seconds. If that's not you, you're invisible to them.</p>
+
+      <div class="stat-callout">
+        <p class="stat-callout-val green">73%</p>
+        <p class="stat-callout-desc">of patients trust a dental practice more when it has 10+ reviews. Practices with fewer than 10 reviews are often skipped entirely.</p>
+      </div>
+
+      <h2>The Review Gap Is Real — And Getting Wider</h2>
+      <p>The average dental practice has 18 Google reviews. The top-performing practices in any given metro area have 200–500+. That gap doesn't close by accident. It closes because one practice has a system and the other doesn't.</p>
+
+      <div class="compare-box">
+        <div class="compare-item bad">
+          <p class="compare-label">Without a System</p>
+          <p class="compare-val">18</p>
+          <p class="compare-desc">Average reviews. Staff forgets to ask. Some patients feel awkward. Growth is random.</p>
+        </div>
+        <div class="compare-item good">
+          <p class="compare-label">With Automation</p>
+          <p class="compare-val">4×</p>
+          <p class="compare-desc">More reviews generated. Every patient asked, at the right time, with a direct link.</p>
+        </div>
+      </div>
+
+      <h2>Why Manual Doesn't Work</h2>
+      <p>Most practices rely on staff to ask patients for reviews. This approach fails for three reasons:</p>
+      <ol>
+        <li><strong>Staff forgets.</strong> They're busy with check-outs, phones, insurance. Asking for reviews is the last thing on their mind.</li>
+        <li><strong>It's awkward.</strong> Most front desk staff feel uncomfortable asking patients to leave a review. The hesitation shows.</li>
+        <li><strong>The timing is wrong.</strong> If you do ask, it's usually at the end of the visit while the patient is putting on their coat. That's not when they're going to pull out their phone and leave a review.</li>
+      </ol>
+
+      <h2>The Timing That Actually Works</h2>
+      <p>The optimal moment to request a review is 45–90 minutes after the appointment ends. The patient is back in their day, the experience is fresh, and they have a moment to respond to a text.</p>
+      <p>That's exactly when the automated request should fire — personalized, with a direct link, sent via SMS.</p>
+
+      <div class="msg-preview">
+        <p class="msg-label">EXAMPLE MESSAGE SENT 1 HOUR AFTER APPOINTMENT</p>
+        <div class="msg-bubble">"Hi Sarah! Thank you for visiting [Practice Name] today. We hope your appointment went well. If you have a moment, we'd really appreciate a quick Google review — it helps other patients find us! → [direct Google review link]"</div>
+      </div>
+
+      <p>When the message includes the patient's name, is sent at the right time, and links directly to the review page (no searching required), 35–55% of patients who receive it will leave a review.</p>
+
+      <h2>The Negative Feedback Filter</h2>
+      <p>One concern practices have: "What if we accidentally send a review request to an unhappy patient and they leave a 1-star review?"</p>
+      <p>A well-designed system handles this. Before routing a patient to Google, the initial message can gauge their experience. If they indicate they weren't satisfied, they're routed to you privately — giving you the chance to resolve the issue before it becomes a public 1-star that tanks your rating.</p>
+
+      <h2>What 6 Months of Automation Looks Like</h2>
+      <p>At 10 patient visits per day, 5 days per week, and a 40% review conversion rate on automated requests:</p>
+      <ul>
+        <li>Week 1: 20 new reviews</li>
+        <li>Month 1: ~80 new reviews</li>
+        <li>Month 6: ~480 new reviews</li>
+      </ul>
+      <p>That's the difference between being invisible on Google Maps and being the obvious choice when a new patient searches.</p>
+
+      <div class="article-cta">
+        <h2 class="article-cta-title">See Where Your Practice Stands.</h2>
+        <p class="article-cta-sub">Take the free 3-minute assessment. Get your infrastructure score across 5 areas of your practice.</p>
+        <a class="btn-primary" href="https://assessment.arizn.co/">Take the Free Assessment →</a>
+      </div>
+    </article>
+
+    <section class="related">
+      <div class="wrap">
+        <h2 class="related-title">More for Dental Practices</h2>
+        <div class="related-grid">
+          <a class="related-card" href="/dentist"><p class="related-tag">DENTAL</p><h3 class="related-card-title">ARIZN for Dental Practices — Full Infrastructure Overview</h3></a>
+          <a class="related-card" href="/review-agent"><p class="related-tag">PRODUCT</p><h3 class="related-card-title">ARIZN Review Request Agent — Reviews on Autopilot</h3></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div><div class="footer-logo">ARIZN<span>•</span></div><p class="footer-tagline">The Future of Local Business.</p><p class="footer-desc">Business infrastructure for local businesses. Built like a big company.</p></div>
+      <nav aria-label="Footer solutions"><p class="footer-col-title">SOLUTIONS</p><a class="footer-link" href="/receptionist">ARIZN Receptionist</a><a class="footer-link" href="/review-agent">Review Request Agent</a><a class="footer-link" href="/no-show-prevention">No-Show Prevention</a><a class="footer-link" href="/quote-recovery">Quote Recovery</a><a class="footer-link" href="/website-gbp">Website + GBP</a></nav>
+      <nav aria-label="Footer company"><p class="footer-col-title">COMPANY</p><a class="footer-link" href="/#process">How It Works</a><a class="footer-link" href="/#verticals">Who It's For</a><a class="footer-link" href="/guides">Guides</a><a class="footer-link" href="/blog">Blog</a><a class="footer-link" href="https://assessment.arizn.co/">Take the Assessment</a></nav>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom"><p>© 2026 ARIZN. All rights reserved.</p><p>Built like a big company.</p></div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    menuToggle.addEventListener("click", () => { const open = document.body.classList.toggle("nav-open"); menuToggle.setAttribute("aria-expanded", String(open)); });
+  </script>
+</body>
+</html>

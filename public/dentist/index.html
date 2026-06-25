@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARIZN for Dentists — Empty Chairs Cost $200–400 Per No-Show</title>
+  <meta name="description" content="Dental no-shows cost $200–400 each. ARIZN's AI reduces no-shows by 80%, fills cancellations automatically, and generates Google reviews after every visit.">
+  <link rel="canonical" href="https://arizn.co/dentist">
+  <meta property="og:title" content="Empty Chairs Cost $200–400 Per No-Show — ARIZN Fills Them">
+  <meta property="og:description" content="Reduce dental no-shows by 80%, fill cancellations automatically, and build Google reviews — all on autopilot.">
+  <meta property="og:url" content="https://arizn.co/dentist">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"ARIZN for Dental Practices","description":"AI patient management and automation platform for dental practices","provider":{"@type":"Organization","name":"ARIZN","url":"https://arizn.co"},"areaServed":"United States"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #F5F5F7; --white: #FFFFFF; --dark: #0A0A0A; --text: #1d1d1f; --body: #6e6e73; --muted: #86868b; --accent: #0D9E75; --accent-blue: #1A56FF; --border: #E8E8E8; --btn-grad: linear-gradient(135deg, #5f6064 0%, #2f3034 42%, #111113 100%); --btn-grad-hover: linear-gradient(315deg, #5f6064 0%, #2f3034 42%, #111113 100%); --font-head: "Inter", -apple-system, "SF Pro Text", sans-serif; --font-body: "Inter", -apple-system, "SF Pro Text", sans-serif; --radius: 16px; --radius-pill: 980px; --max: 1140px; --pad: 48px; }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--body); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+    .site-nav { position: fixed; top: 0; left: 0; z-index: 100; width: 100%; background: rgba(245,245,247,0.86); backdrop-filter: blur(20px) saturate(180%); }
+    .nav-inner { display: grid; min-height: 64px; align-items: center; grid-template-columns: 1fr auto 1fr; gap: 24px; }
+    .logo { display: inline-flex; align-items: center; justify-self: start; width: 160px; height: 38px; overflow: hidden; }
+    .logo img { width: 100%; height: 100%; object-fit: contain; object-position: left center; }
+    .nav-links { display: flex; align-items: center; justify-content: center; gap: 32px; color: var(--text); font-size: 14px; }
+    .nav-links a:hover { color: var(--accent-blue); }
+    .nav-cta { justify-self: end; padding: 8px 20px; background: var(--btn-grad); border-radius: var(--radius-pill); color: #fff; font-size: 14px; font-weight: 500; }
+    .nav-cta:hover { background: var(--btn-grad-hover); }
+    .menu-toggle { display: none; width: 40px; height: 40px; align-items: center; justify-content: center; flex-direction: column; gap: 5px; justify-self: end; background: transparent; border: 0; cursor: pointer; }
+    .menu-toggle span, .menu-toggle::before, .menu-toggle::after { content: ""; width: 18px; height: 1.5px; background: var(--text); transition: opacity .15s, transform .15s; }
+    body.nav-open .menu-toggle span { opacity: 0; }
+    body.nav-open .menu-toggle::before { transform: translateY(6.5px) rotate(45deg); }
+    body.nav-open .menu-toggle::after { transform: translateY(-6.5px) rotate(-45deg); }
+    .hero { padding: 144px 0 96px; background: #0C0C0C; }
+    .hero-vertical { margin: 0 0 16px; color: rgba(255,255,255,.4); font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
+    .hero-vertical::before { content: "🦷"; }
+    .hero-title { margin: 0; color: #fff; font-family: var(--font-head); font-size: 62px; font-weight: 800; letter-spacing: -.04em; line-height: 1.04; }
+    .hero-title span { color: var(--accent); }
+    .hero-sub { margin: 20px 0 0; color: rgba(255,255,255,.6); font-size: 20px; max-width: 600px; line-height: 1.6; }
+    .hero-cta { display: flex; align-items: center; gap: 16px; margin-top: 40px; flex-wrap: wrap; }
+    .btn-primary { display: inline-flex; align-items: center; justify-content: center; padding: 16px 36px; background: var(--btn-grad); border: 0; border-radius: var(--radius-pill); color: #fff; font-size: 16px; font-weight: 600; transition: background .2s, transform .2s; }
+    .btn-primary:hover { background: var(--btn-grad-hover); transform: translateY(-1px); }
+    .hero-note { color: rgba(255,255,255,.35); font-size: 13px; }
+    .hero-loss-calc { margin-top: 64px; padding: 40px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); border-radius: 20px; display: grid; grid-template-columns: repeat(3,1fr); gap: 0; }
+    .lc-item { padding: 0 32px; }
+    .lc-item + .lc-item { border-left: 1px solid rgba(255,255,255,.08); }
+    .lc-label { margin: 0; color: rgba(255,255,255,.35); font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+    .lc-val { margin: 8px 0 0; color: #fff; font-family: var(--font-head); font-size: 40px; font-weight: 800; line-height: 1; }
+    .lc-val.bad { color: #EF4444; }
+    .lc-val.good { color: var(--accent); }
+    .lc-desc { margin: 6px 0 0; color: rgba(255,255,255,.4); font-size: 13px; line-height: 1.5; }
+    .section-label { margin: 0 0 10px; color: var(--accent); font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+    .section-title { margin: 0; font-family: var(--font-head); font-size: 44px; font-weight: 900; color: var(--text); letter-spacing: -.03em; line-height: 1.08; }
+    .section-body { margin: 16px 0 0; font-size: 17px; line-height: 1.7; color: var(--body); }
+    .problem { padding: 96px 0; background: var(--bg); }
+    .problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 48px; }
+    .problem-card { padding: 28px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); }
+    .problem-card.bad { border-left: 3px solid #EF4444; }
+    .pc-header { margin: 0 0 12px; color: var(--text); font-size: 17px; font-weight: 700; }
+    .pc-body { margin: 0; color: var(--body); font-size: 15px; line-height: 1.65; }
+    .pc-stat { margin: 16px 0 0; padding: 12px 16px; background: rgba(239,68,68,.06); border-radius: 10px; color: #EF4444; font-size: 14px; font-weight: 600; }
+    .solution { padding: 96px 0; background: var(--white); }
+    .solution-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; margin-top: 56px; }
+    .feat-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 16px; }
+    .feat-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: var(--text); line-height: 1.5; }
+    .feat-list li::before { content: "✓"; color: var(--accent); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .dark-card { background: #0C0C0C; border-radius: 20px; padding: 40px; border: 1px solid rgba(255,255,255,0.08); display: grid; gap: 20px; }
+    .dark-card-item { padding: 20px; background: rgba(255,255,255,0.04); border-radius: 12px; border: 1px solid rgba(255,255,255,0.06); }
+    .dci-label { margin: 0; color: rgba(255,255,255,.4); font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+    .dci-val { margin: 6px 0 0; color: #fff; font-size: 22px; font-weight: 700; }
+    .dci-desc { margin: 4px 0 0; color: rgba(255,255,255,.5); font-size: 13px; }
+    .products { padding: 96px 0; background: var(--bg); }
+    .products-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 48px; }
+    .prod-card { padding: 28px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); transition: transform .2s, box-shadow .2s; display: block; color: inherit; }
+    .prod-card:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(0,0,0,.08); }
+    .prod-icon { font-size: 32px; margin-bottom: 16px; }
+    .prod-name { margin: 0 0 8px; color: var(--text); font-size: 17px; font-weight: 700; }
+    .prod-body { margin: 0; color: var(--body); font-size: 14px; line-height: 1.65; }
+    .prod-result { margin: 12px 0 0; color: var(--accent); font-size: 13px; font-weight: 600; }
+    .final-cta { padding: 120px 0; background: #0C0C0C; text-align: center; }
+    .final-cta-title { margin: 0; color: #fff; font-family: var(--font-head); font-size: 48px; font-weight: 800; letter-spacing: -.03em; line-height: 1.08; }
+    .final-cta-sub { margin: 16px auto 0; color: rgba(255,255,255,.5); font-size: 19px; max-width: 500px; line-height: 1.6; }
+    .final-cta .btn-primary { margin-top: 40px; font-size: 17px; padding: 18px 48px; }
+    .final-cta-note { margin: 14px 0 0; color: rgba(255,255,255,.3); font-size: 13px; }
+    .site-footer { background: #0A0A0A; padding: 64px 0 40px; border-top: 1px solid rgba(255,255,255,.06); }
+    .footer-inner { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 64px; margin-bottom: 48px; }
+    .footer-logo { color: #fff; font-size: 22px; font-weight: 800; }
+    .footer-logo span { color: var(--accent-blue); }
+    .footer-tagline { margin: 8px 0 0; color: rgba(255,255,255,.4); font-size: 14px; font-style: italic; }
+    .footer-desc { margin: 16px 0 0; color: rgba(255,255,255,.3); font-size: 13px; line-height: 1.7; max-width: 260px; }
+    .footer-col-title { margin: 0 0 20px; color: rgba(255,255,255,.3); font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+    .footer-link { display: block; margin-bottom: 10px; color: rgba(255,255,255,.5); font-size: 14px; transition: color .15s; }
+    .footer-link:hover { color: rgba(255,255,255,.9); }
+    .footer-divider { max-width: var(--max); margin: 0 auto 32px; padding: 0 var(--pad); border: 0; border-top: 1px solid rgba(255,255,255,.06); }
+    .footer-bottom { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); display: grid; grid-template-columns: 1fr 1fr; }
+    .footer-bottom p { margin: 0; color: rgba(255,255,255,.25); font-size: 13px; }
+    .footer-bottom p:last-child { text-align: right; }
+    .fade-in { opacity: 0; transform: translateY(18px); transition: opacity .55s, transform .55s; }
+    .fade-in.visible { opacity: 1; transform: none; }
+    @media (max-width: 768px) {
+      .hero { padding: 112px 0 72px; } .hero-title { font-size: 40px; }
+      .hero-loss-calc { grid-template-columns: 1fr; gap: 24px; padding: 28px; }
+      .lc-item + .lc-item { border-left: 0; border-top: 1px solid rgba(255,255,255,.08); padding-top: 24px; }
+      .problem-grid, .solution-grid, .products-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; gap: 36px; } .footer-bottom { grid-template-columns: 1fr; }
+      .footer-bottom p:last-child { text-align: left; }
+      .nav-inner { display: flex; justify-content: space-between; }
+      .nav-links { position: fixed; top: 64px; inset-inline: 0; display: grid; padding: 12px 24px 18px; background: rgba(251,251,253,.96); border-bottom: 1px solid rgba(0,0,0,.08); opacity: 0; pointer-events: none; transform: translateY(-10px); transition: opacity .15s, transform .15s; backdrop-filter: blur(20px); }
+      .nav-links a { padding: 12px 0; }
+      body.nav-open .nav-links { opacity: 1; pointer-events: auto; transform: none; }
+      .nav-cta { display: none; } .menu-toggle { display: flex; }
+      .section-title { font-size: 34px; } .final-cta-title { font-size: 34px; }
+      .wrap { padding: 0 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-nav">
+    <nav class="wrap nav-inner" aria-label="Primary navigation">
+      <a class="logo" href="/" aria-label="ARIZN home"><img src="/images/logo-arizn-preto-header.png" alt="ARIZN logo"></a>
+      <div class="nav-links" id="navLinks">
+        <a href="/#solution">Solutions</a><a href="/#process">How It Works</a><a href="/#products">Products</a><a href="/guides">Guides</a><a href="/#contact">Contact</a>
+      </div>
+      <a class="nav-cta" href="https://assessment.arizn.co/">Talk to ARIZN</a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <p class="hero-vertical">Dental Practices</p>
+        <h1 class="hero-title">Empty Chairs Cost<br><span>$200–400</span> Per No-Show.</h1>
+        <p class="hero-sub">The average dental practice loses 3–5 appointments per week to no-shows and late cancellations. ARIZN reduces that by 80% — and automatically fills the gaps.</p>
+        <div class="hero-cta">
+          <a class="btn-primary" href="https://assessment.arizn.co/">Take the Free Assessment →</a>
+          <span class="hero-note">3 minutes. See your revenue loss.</span>
+        </div>
+        <div class="hero-loss-calc">
+          <div class="lc-item"><p class="lc-label">No-Shows Per Week</p><p class="lc-val bad">3–5</p><p class="lc-desc">Average for dental practices without systems</p></div>
+          <div class="lc-item"><p class="lc-label">Revenue Per Chair Hour</p><p class="lc-val">$350</p><p class="lc-desc">Average dental appointment value</p></div>
+          <div class="lc-item"><p class="lc-label">Monthly Revenue Lost</p><p class="lc-val bad">$4,200+</p><p class="lc-desc">From no-shows and last-minute cancellations</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="problem">
+      <div class="wrap">
+        <div class="fade-in">
+          <p class="section-label">THE PROBLEM</p>
+          <h2 class="section-title">Your Chairs Are Empty.<br>Your Revenue Isn't Optional.</h2>
+          <p class="section-body" style="max-width:640px">In a dental practice, every empty chair is lost revenue you can't get back. And most practices are managing this with phone calls, paper reminders, and staff who forget to follow up.</p>
+        </div>
+        <div class="problem-grid">
+          <div class="problem-card bad fade-in"><h3 class="pc-header">No-Shows and Late Cancellations</h3><p class="pc-body">Patients forget. They don't show up. That chair sits empty while your overhead runs — staff, equipment, facility costs.</p><p class="pc-stat">Average cost: $200–400 per no-show</p></div>
+          <div class="problem-card bad fade-in"><h3 class="pc-header">Manual Reminder Calls</h3><p class="pc-body">Your front desk calls patients individually. Time-consuming, inconsistent, and ineffective — especially for last-minute cancellations.</p><p class="pc-stat">Front desk time = wasted on calls</p></div>
+          <div class="problem-card bad fade-in"><h3 class="pc-header">Slow New Patient Acquisition</h3><p class="pc-body">Patients search "dentist near me" on Google. They read reviews. If your competitor has more stars and more reviews, they get the call — not you.</p><p class="pc-stat">3× more patients book online vs. phone</p></div>
+          <div class="problem-card bad fade-in"><h3 class="pc-header">Missed Recall Opportunities</h3><p class="pc-body">Patients who came in 6 months ago aren't being recalled automatically. That's a full schedule of patients you're not monetizing.</p><p class="pc-stat">60% of patients don't return without prompting</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="solution">
+      <div class="wrap">
+        <div class="fade-in">
+          <p class="section-label">THE SOLUTION</p>
+          <h2 class="section-title">ARIZN Fills Your Chairs.<br>Builds Your Reputation.</h2>
+        </div>
+        <div class="solution-grid">
+          <div class="fade-in">
+            <p class="section-body">ARIZN automates the full patient lifecycle — from appointment booking to confirmation, reminders, post-visit review requests, and 6-month recall messages. Your front desk handles what actually matters. Everything routine runs automatically.</p>
+            <ul class="feat-list" style="margin-top:28px">
+              <li>3-touch reminder sequence (confirm + 24h + 2h)</li>
+              <li>One-tap cancel or reschedule for patients</li>
+              <li>Automatic waitlist backfill on cancellations</li>
+              <li>Review requests sent 1 hour after each visit</li>
+              <li>6-month recall messages to bring patients back</li>
+              <li>24/7 booking via text, web, and Google</li>
+            </ul>
+          </div>
+          <div class="dark-card fade-in">
+            <div class="dark-card-item"><p class="dci-label">NO-SHOW REDUCTION</p><p class="dci-val">Up to 80%</p><p class="dci-desc">Fewer empty chairs per week</p></div>
+            <div class="dark-card-item"><p class="dci-label">REVIEW INCREASE</p><p class="dci-val">4× more</p><p class="dci-desc">Google reviews vs. manual requesting</p></div>
+            <div class="dark-card-item"><p class="dci-label">MONTHLY ROI</p><p class="dci-val">$2,000+</p><p class="dci-desc">In recovered revenue from reduced no-shows</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="products">
+      <div class="wrap">
+        <div class="fade-in">
+          <p class="section-label">WHAT WE BUILD FOR DENTAL PRACTICES</p>
+          <h2 class="section-title">Built Around Your Practice.<br>Not a Generic Template.</h2>
+        </div>
+        <div class="products-grid">
+          <a class="prod-card fade-in" href="/no-show-prevention"><div class="prod-icon">📅</div><h3 class="prod-name">No-Show Prevention</h3><p class="prod-body">Confirmation + 24h + 2h reminders for every appointment. Automatic waitlist fill on cancellations.</p><p class="prod-result">→ Reduce no-shows by up to 80%</p></a>
+          <a class="prod-card fade-in" href="/review-agent"><div class="prod-icon">⭐</div><h3 class="prod-name">Review Request Agent</h3><p class="prod-body">Automatic review requests 1 hour after every visit. Build your Google rating without asking staff to remember.</p><p class="prod-result">→ 4× more Google reviews</p></a>
+          <a class="prod-card fade-in" href="/receptionist"><div class="prod-icon">📱</div><h3 class="prod-name">24/7 AI Receptionist</h3><p class="prod-body">AI that answers calls, books appointments, and handles common questions — outside office hours too.</p><p class="prod-result">→ Never miss a new patient call</p></a>
+          <a class="prod-card fade-in" href="/receptionist"><div class="prod-icon">💬</div><h3 class="prod-name">Patient Recall System</h3><p class="prod-body">6-month recall messages sent automatically. Bring back patients you'd otherwise lose to competitors.</p><p class="prod-result">→ Fill schedule from existing patients</p></a>
+          <a class="prod-card fade-in" href="/website-gbp"><div class="prod-icon">📍</div><h3 class="prod-name">Google Business Profile</h3><p class="prod-body">Complete GBP optimization so new patients find you first when searching "dentist near me."</p><p class="prod-result">→ Outrank competitors on Google Maps</p></a>
+          <a class="prod-card fade-in" href="/website-gbp"><div class="prod-icon">🌐</div><h3 class="prod-name">Modern Website</h3><p class="prod-body">Fast, professional, built to convert visitors into booked patients. Mobile-first and SEO-optimized.</p><p class="prod-result">→ Turn website visitors into patients</p></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="wrap">
+        <h2 class="final-cta-title">See Exactly How Much Revenue<br>Your Practice Is Losing.</h2>
+        <p class="final-cta-sub">Take the free 3-minute assessment. Get your infrastructure score and a plan to fix it.</p>
+        <a class="btn-primary" href="https://assessment.arizn.co/">Take the Free Assessment →</a>
+        <p class="final-cta-note">3 minutes. No credit card. Instant results.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div><div class="footer-logo">ARIZN<span>•</span></div><p class="footer-tagline">The Future of Local Business.</p><p class="footer-desc">Business infrastructure for local businesses. Built like a big company.</p></div>
+      <nav aria-label="Footer solutions"><p class="footer-col-title">SOLUTIONS</p><a class="footer-link" href="/receptionist">ARIZN Receptionist</a><a class="footer-link" href="/review-agent">Review Request Agent</a><a class="footer-link" href="/no-show-prevention">No-Show Prevention</a><a class="footer-link" href="/quote-recovery">Quote Recovery</a><a class="footer-link" href="/website-gbp">Website + GBP</a></nav>
+      <nav aria-label="Footer company"><p class="footer-col-title">COMPANY</p><a class="footer-link" href="/#process">How It Works</a><a class="footer-link" href="/#verticals">Who It's For</a><a class="footer-link" href="/guides">Guides</a><a class="footer-link" href="/blog">Blog</a><a class="footer-link" href="https://assessment.arizn.co/">Take the Assessment</a></nav>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom"><p>© 2026 ARIZN. All rights reserved.</p><p>Built like a big company.</p></div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    menuToggle.addEventListener("click", () => { const open = document.body.classList.toggle("nav-open"); menuToggle.setAttribute("aria-expanded", String(open)); });
+    const obs = new IntersectionObserver((e, o) => { e.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); o.unobserve(entry.target); } }); }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
