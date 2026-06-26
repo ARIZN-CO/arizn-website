@@ -1,0 +1,11 @@
+{
+  "slug": "electrician-answering-service",
+  "client": "arizn",
+  "repo": "ARIZN-CO/arizn-website",
+  "blog_path": "blog",
+  "site_url": "https://arizn.co",
+  "cardHtml": "\n          <!-- ARTICLE:electrician-answering-service -->\n          <article class=\"blog-card fade-in\">\n            <div class=\"blog-card-cover cover-elec\" style=\"background:linear-gradient(135deg, #1a1200 0%, #2e2000 60%, rgba(245,200,66,0.13) 100%);\">\n              <span class=\"card-icon\">📝</span>\n            </div>\n            <div class=\"blog-card-body\">\n              <div class=\"card-top\">\n                <span class=\"card-cat cat-elec\" style=\"background:rgba(217,119,6,.08);color:#D97706;\">Electrician</span>\n                \n                <span class=\"card-read-time\">8 min read</span>\n              </div>\n              <h2 class=\"card-title\">Electrician Answering Service: Stop Losing Emergency Jobs</h2>\n              <p class=\"card-excerpt\">Ten missed calls a week quietly drains $43,750 a year out of your electrical business — and every one was a job you were qualified to do. Here's how a 24/7 electrician answering service captures those calls so the next sparking-outlet emergency rings you, not your competitor.</p>\n              <a class=\"card-link\" href=\"/blog/electrician-answering-service\">Read article →</a>\n            </div>\n          </article>",
+  "commitUrl": "https://github.com/ARIZN-CO/arizn-website/commit/625d07923df97f78554e70e00c5404a7605c3706",
+  "articleUrl": "https://arizn.co/blog/electrician-answering-service",
+  "createdAt": "2026-06-26T23:50:03.072Z"
+}
