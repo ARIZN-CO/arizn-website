@@ -1,0 +1,11 @@
+{
+  "slug": "electrician-after-hours-calls",
+  "client": "arizn",
+  "repo": "ARIZN-CO/arizn-website",
+  "blog_path": "blog",
+  "site_url": "https://arizn.co",
+  "cardHtml": "\n          <!-- ARTICLE:electrician-after-hours-calls -->\n          <article class=\"blog-card fade-in\">\n            <div class=\"blog-card-cover cover-elec\" style=\"background:linear-gradient(135deg, #1a1200 0%, #2e2000 60%, rgba(245,200,66,0.13) 100%);\">\n              <span class=\"card-icon\">📝</span>\n            </div>\n            <div class=\"blog-card-body\">\n              <div class=\"card-top\">\n                <span class=\"card-cat cat-elec\" style=\"background:rgba(217,119,6,.08);color:#D97706;\">Electrician</span>\n                \n                <span class=\"card-read-time\">6 min read</span>\n              </div>\n              <h2 class=\"card-title\">24/7 Electrician Answering Service: Stop Losing Night Calls</h2>\n              <p class=\"card-excerpt\">Every night a tripped breaker or burning smell sends a homeowner down their call list — and if you don't pick up, you just lost $875 this week and $43,750 this year. Here's the 24/7 answering system that captures those emergency calls before your competitor does.</p>\n              <a class=\"card-link\" href=\"/blog/electrician-after-hours-calls\">Read article →</a>\n            </div>\n          </article>",
+  "commitUrl": "https://github.com/ARIZN-CO/arizn-website/commit/8397c6a08820104d0e76075d45ee1764f897d032",
+  "articleUrl": "https://arizn.co/blog/electrician-after-hours-calls",
+  "createdAt": "2026-06-26T23:47:43.316Z"
+}
