@@ -74,11 +74,10 @@
     .faq-item:hover { border-color: rgba(26,86,255,.3); }
     .faq-item h3 { margin: 0 0 10px; font-size: 17px; font-weight: 700; color: var(--text); }
     .faq-item p { margin: 0; font-size: 15px; line-height: 1.7; }
-    .author-card { display: flex; align-items: flex-start; gap: 16px; margin: 48px 0 0; padding: 28px 32px; background: var(--bg); border-radius: 16px; border: 1px solid var(--border); }
-    .author-avatar { flex-shrink: 0; width: 48px; height: 48px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 20px; font-weight: 800; }
-    .author-info { flex: 1; }
-    .author-name { margin: 0 0 6px; font-size: 15px; font-weight: 700; color: var(--text); }
-    .author-bio { margin: 0; font-size: 14px; line-height: 1.6; color: var(--body); }
+    .author-byline { display: flex; align-items: center; gap: 14px; margin: 56px 0 0; padding-top: 32px; border-top: 1px solid var(--border); }
+    .author-byline-avatar { flex-shrink: 0; width: 40px; height: 40px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 16px; font-weight: 800; }
+    .author-byline-name { margin: 0 0 3px; font-size: 13px; font-weight: 700; color: var(--text); }
+    .author-byline-bio { margin: 0; font-size: 13px; line-height: 1.5; color: var(--muted); }
     .related { background: var(--bg); padding: 80px 0; border-top: 1px solid var(--border); }
     .related-title { margin: 0 0 40px; font-size: 28px; font-weight: 800; color: var(--text); letter-spacing: -.02em; }
     .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
@@ -115,7 +114,6 @@
       body.nav-open .nav-links { opacity: 1; pointer-events: auto; transform: none; }
       .nav-cta { display: none; } .menu-toggle { display: flex; }
       .wrap { padding: 0 20px; }
-      .author-card { flex-direction: column; }
     }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-F723PBFG0Z"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F723PBFG0Z');</script>
@@ -287,6 +285,14 @@
         <div class="author-info">
           <p class="author-name">ARIZN Team</p>
           <p class="author-bio">We help local service businesses run like a big company — with AI-powered receptionist, review, and lead systems built for the trades.</p>
+        </div>
+      </div>
+      
+      <div class="author-byline">
+        <div class="author-byline-avatar">A</div>
+        <div>
+          <p class="author-byline-name">Written by ARIZN Team</p>
+          <p class="author-byline-bio">We help local service businesses run like a big company — AI-powered receptionist, review, and lead systems built for the trades.</p>
         </div>
       </div>
     </article>
