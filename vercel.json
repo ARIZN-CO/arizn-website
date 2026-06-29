@@ -2,6 +2,13 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "outputDirectory": "public",
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "sites.arizn.co" }],
+      "destination": "/sites/:path*"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

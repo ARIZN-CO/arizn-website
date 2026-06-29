@@ -52,11 +52,11 @@
     .blog-hero-sub { margin: 16px 0 0; color: var(--body); font-size: 18px; max-width: 560px; line-height: 1.6; }
 
     /* Articles grid */
-    .blog-body { padding: 80px 0 96px; }
-    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-    .blog-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s; }
-    .blog-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,.10); }
-    .blog-card-cover { height: 180px; display: flex; align-items: flex-end; padding: 20px; position: relative; }
+    .blog-body { padding: 80px 0 96px; background: #0a0a0a; }
+    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .blog-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius); display: flex; flex-direction: column; transition: border-color .2s, transform .2s; }
+    .blog-card:hover { border-color: rgba(26,86,255,.5); transform: translateY(-3px); }
+    .blog-card-cover { height: 180px; display: flex; align-items: flex-end; padding: 20px; position: relative; border-radius: var(--radius) var(--radius) 0 0; overflow: hidden; }
     .cover-hvac { background: linear-gradient(135deg, #0a0e1a 0%, #1a2744 60%, #1A56FF22 100%); }
     .cover-auto { background: linear-gradient(135deg, #1a0e00 0%, #2e1a00 60%, #F5A62322 100%); }
     .cover-dental { background: linear-gradient(135deg, #041410 0%, #093322 60%, #0D9E7522 100%); }
@@ -64,14 +64,14 @@
     .blog-card-body { padding: 24px 24px 28px; display: flex; flex-direction: column; flex: 1; }
     .card-top { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
     .card-cat { padding: 3px 10px; border-radius: var(--radius-pill); font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
-    .cat-hvac { background: rgba(26,86,255,.08); color: var(--accent); }
-    .cat-auto { background: rgba(245,166,35,.1); color: #C47A00; }
-    .cat-dental { background: rgba(13,158,117,.1); color: #0D9E75; }
-    .card-popular { padding: 3px 10px; background: #0A0A0A; border-radius: var(--radius-pill); color: #fff; font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
-    .card-read-time { margin-left: auto; color: var(--muted); font-size: 12px; white-space: nowrap; }
-    .card-title { margin: 0 0 10px; color: var(--text); font-size: 18px; font-weight: 700; line-height: 1.3; }
-    .card-excerpt { margin: 0; color: var(--body); font-size: 14px; line-height: 1.65; flex: 1; }
-    .card-link { display: inline-flex; align-items: center; gap: 4px; margin-top: 20px; color: var(--accent); font-size: 14px; font-weight: 600; transition: gap .15s; }
+    .cat-hvac { background: rgba(26,86,255,.12); color: #6b9bff; }
+    .cat-auto { background: rgba(245,166,35,.12); color: #f5a623; }
+    .cat-dental { background: rgba(13,158,117,.12); color: #34d399; }
+    .card-popular { padding: 3px 10px; background: rgba(255,255,255,.1); border-radius: var(--radius-pill); color: rgba(255,255,255,.8); font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+    .card-read-time { margin-left: auto; color: rgba(255,255,255,.3); font-size: 12px; white-space: nowrap; }
+    .card-title { margin: 0 0 10px; color: #fff; font-size: 18px; font-weight: 700; line-height: 1.3; }
+    .card-excerpt { margin: 0; color: rgba(255,255,255,.45); font-size: 14px; line-height: 1.65; flex: 1; }
+    .card-link { display: inline-flex; align-items: center; gap: 4px; margin-top: 20px; color: #6b9bff; font-size: 14px; font-weight: 600; transition: gap .15s; }
     .card-link:hover { gap: 8px; }
 
     /* CTA strip */
@@ -153,7 +153,7 @@
             <div class="blog-card-body">
               <div class="card-top">
                 <span class="card-cat cat-elec" style="background:rgba(217,119,6,.08);color:#D97706;">Electrician</span>
-                
+
                 <span class="card-read-time">8 min read</span>
               </div>
               <h2 class="card-title">Electrician Answering Service: Stop Losing Emergency Jobs</h2>
@@ -169,7 +169,7 @@
             <div class="blog-card-body">
               <div class="card-top">
                 <span class="card-cat cat-elec" style="background:rgba(217,119,6,.08);color:#D97706;">Electrician</span>
-                
+
                 <span class="card-read-time">7 min read</span>
               </div>
               <h2 class="card-title">Electrician Missed Calls Cost You $49,875 a Year</h2>
