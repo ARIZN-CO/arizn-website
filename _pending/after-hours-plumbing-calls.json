@@ -1,0 +1,11 @@
+{
+  "slug": "after-hours-plumbing-calls",
+  "client": "arizn",
+  "repo": "ARIZN-CO/arizn-website",
+  "blog_path": "blog",
+  "site_url": "https://arizn.co",
+  "cardHtml": "\n          <!-- ARTICLE:after-hours-plumbing-calls -->\n          <article class=\"blog-card fade-in\">\n            <div class=\"blog-card-cover cover-plumb\" style=\"background:linear-gradient(135deg, #00121a 0%, #002030 60%, rgba(8,145,178,0.13) 100%);\">\n              <span class=\"card-icon\">📝</span>\n            </div>\n            <div class=\"blog-card-body\">\n              <div class=\"card-top\">\n                <span class=\"card-cat cat-plumb\" style=\"background:rgba(8,145,178,.08);color:#0891B2;\">Plumber</span>\n                \n                <span class=\"card-read-time\">6 min read</span>\n              </div>\n              <h2 class=\"card-title\">24/7 Plumbing Answering Service: Answer Every Emergency Call</h2>\n              <p class=\"card-excerpt\">You're losing $875 per week to after-hours calls that ring to voicemail. Customers in a plumbing emergency don't wait—they call the next plumber in Google results. A 24/7 plumbing answering service answers that call, books the job, and keeps your revenue from walking to competitors.</p>\n              <a class=\"card-link\" href=\"/blog/after-hours-plumbing-calls\">Read article →</a>\n            </div>\n          </article>",
+  "commitUrl": "https://github.com/ARIZN-CO/arizn-website/commit/a34e396dea7e3d1e1bc2ceb29afd7c05ba294c7f",
+  "articleUrl": "https://arizn.co/blog/after-hours-plumbing-calls",
+  "createdAt": "2026-07-01T21:23:59.830Z"
+}
